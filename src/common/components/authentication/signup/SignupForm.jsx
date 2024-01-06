@@ -2,6 +2,9 @@ import React, { useMemo, useState } from "react";
 import InputBox from "../../formcontrols/InputBox";
 import PasswordBox from "../../formcontrols/PasswordBox";
 import Button from "../../formcontrols/Button";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebookF } from "react-icons/fa";
+import { LuArrowRight } from "react-icons/lu";
 
 const SignupForm = ({ state, setState = () => {}, onSuccess = () => {} }) => {
   // State
@@ -57,12 +60,25 @@ const SignupForm = ({ state, setState = () => {}, onSuccess = () => {} }) => {
   return (
     <form className="form" onSubmit={onSubmit} id="signup_user_details_form">
       <div className="form-top">
+        <div className="singupwith">
+          <FaFacebookF className="facebook-icon" />
+          Sign up with Facebook
+          <LuArrowRight />
+        </div>
+        <div className="singupwith">
+          <FcGoogle />
+          Sign up with Google
+          <LuArrowRight />
+        </div>
+        <span>
+          -----------------------------------------Or----------------------------------------
+        </span>
         <InputBox
           name={"email"}
           placeholder={"Your email"}
           value={state.email}
           onChange={handleSetData}
-          wrapperClassName={"w-100"}
+          inputClassName={"signup_input"}
           errMsg={_errors.email}
         />
 
@@ -73,43 +89,26 @@ const SignupForm = ({ state, setState = () => {}, onSuccess = () => {} }) => {
           setonPasswordValid={setPasswordValid}
           showPopup={true}
         />
-        {/* <PasswordBox
-        password={state.cpassword}
-        setPassword={(cpassword) => setState({ ...state, cpassword })}
-        onPasswordValid={cPasswordValid}
-        setonPasswordValid={setCPasswordValid}
-        passwordMustSameError={(state.password !== state.cpassword) && state.cpassword?.length} //temporary fix, need to fix the component props
-        name="cnewpassword"
-        disabled={!passwordValid}
-        showPopup={passwordValid}
-      /> */}
-        {/*   {errorMsg && <p className="error-box">{errorMsg}</p>} */}
       </div>
       <div className="form-bottom">
         <Button
           disabled={
             !disabled || btnLoading || state.password !== state.cpassword
           }
-          label={"Submit"}
+          label={"Sign up with email"}
           type={"submit"}
           className="ghostbutton"
           loading={btnLoading}
         />
         <div className="header">
-          <span>
-            Create your account today and analyze, track, and trade stocks like
-            never before{" "}
+          <span className="signup_para">
+            By signing up, you agree to our Terms. We do not allow adult
+            content. You must be 18+ to create a page{" "}
           </span>
         </div>
         <p className="_linkpara">
           Already have an account?{" "}
-          <button
-            // className="link"
-            // onClick={() => router.push("/login/")}
-            type=""
-          >
-            Log In
-          </button>
+          <span className="link">Login</span>
         </p>
       </div>
     </form>
