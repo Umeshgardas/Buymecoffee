@@ -1,0 +1,25 @@
+.Layout {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    height: 100vh;
+    z-index: 999;
+  
+    .mainLayout {
+      @include flexRowStart();
+      height: calc(100vh - 36px);
+  
+      &-inner {
+        flex: 1;
+        height: calc(100vh - 36px);
+        display: flex;
+        flex-direction: column;
+  
+        &_body {
+          width: 100%;
+          padding: calc($space / 2.5);
+          height: calc(100vh - 68px);
+        }
+      }
+    }
+  }
+  

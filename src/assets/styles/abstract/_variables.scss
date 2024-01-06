@@ -1,0 +1,364 @@
+// authentication
+$primary-orange:#FE813F;
+$secondary-light: #ffffff;
+$primary-bg-light: #E0E5E9;
+
+// main colors
+$primary-dark: #010514;
+$secondary-dark: #131725;
+$tertiary-dark: #1a1e2b;
+$quaternary-dark: #353a48;
+$quinary-dark: #404040;
+$senary-dark: #747474;
+
+$primary-light: #f2f2f3;
+$secondary-light: #ffffff;
+$tertiary-light: #e9effe;
+$quaternary-light: #fcfcfc;
+$quinary-light: #d9d9d9;
+$senary-light: #e2e5ec;
+
+$tab-btn: #f6f9ff;
+
+$border-light: #dbdcde;
+$border-dark: #272a37; // #1a1e2b;
+
+$border-secondary-light: #e6e7e8;
+$border-secondary-dark: #272a37; // #1a1e2b;
+
+$purple-primary: #633d99;
+$purple-secondary: #9d7ec6;
+
+//navbar
+$dark-blue: #050e2b;
+
+// subscription cards
+$subscription-card-bg-light-primary: #ffffff;
+$subscription-card-bg-dark-primary: #272a37;
+
+$subscription-card-bg-light-secondary: #ffffff;
+$subscription-card-bg-dark-secondary: #f5f5f533;
+
+// modal
+$modal-bg-light: #ffffff;
+$modal-bg-dark: #1a1e2b;
+$modal-ghost-border: #b5c9fd;
+
+//border colors in select input
+$border-light-blue: #b5c9fd;
+$border-dark-blue: #5583fa;
+
+$red-light-100: #cf262b;
+$red-dark-100: #dc645c;
+
+$blue-light-100: #e9effe;
+$blue-light-200: #2b64f9;
+
+$blue-dark-50: #0d1e4b;
+$blue-dark-100: #091637;
+$blue-dark-200: #5583fa;
+
+$yellow-light-100: #fcbf49;
+$yellow-light-200: #ff8a00;
+
+$yellow-dark-100: #fcbf49;
+$yellow-dark-200: #ff8a00;
+
+$green-light-100: #1d863b;
+$green-light-200: #008387;
+$green-dark-100: #4fbb6e;
+$green-dark-200: #008387;
+
+$transparent: #0000;
+
+//background-color
+$light-bg-grey-1: #f2f2f3;
+
+$dark-bg-grey-1: #1a1e2b;
+$dark-bg-grey-2: #272a37;
+
+//heatmap stocks color
+$green-1: #0d3924;
+$green-2: #166531;
+$green-3: #b2dcbe;
+$grey-1: #e6e7e8;
+$red-3: #f0b9bb;
+$red-2: #872c2a;
+$red-1: #491a20;
+
+$tag-green-bg: #e8f3eb;
+$tag-green-text: #1d863b;
+$tag-green-border: #b2dcbe;
+$tag-green-bg-dark: #0a2b20;
+$tag-green-text-dark: #4fbb6e;
+$tag-green-border-dark: #166531;
+
+$tag-red-bg: #fae9e9;
+$tag-red-text: #dc645c;
+$tag-red-border: #f0b9bb;
+$tag-red-bg-dark: #37141d;
+$tag-red-text-dark: #dc645c;
+$tag-red-border-dark: #872c2a;
+
+$up-light: #1d863b;
+$up-dark: #4fbb6e;
+$down-light: #cf262b;
+$down-dark: #dc645c;
+$nutral: #bfc1c5;
+
+$highChart-lable: #8c8e95;
+$highChart-light-axis-grid: #dbdcde;
+$highChart-dark-axis-grid: #41444f;
+$highChart-light-grid: #e6e7e8;
+$highChart-dark-grid: #1a1e2b;
+$highChart-light-tooltip: #e9effe;
+$highChart-dark-tooltip: #272a37;
+$highChart-light-tooltip-stroke: #b5c9fd;
+$highChart-dark-tooltip-stroke: #0000;
+$highChart-light-text: #272a37;
+$highChart-dark-text: #ffffff;
+
+$ag-light-bg: #ffffff;
+$ag-light-bg-even: #ffffff;
+$ag-light-bg-odd: #F4F4F5;
+$ag-light-bg-expanded: #ECECEE;
+$ag-dark-bg: #131725;
+$ag-dark-bg-even: #131725;
+$ag-dark-bg-odd: #1A1E2B;
+$ag-dark-bg-expanded: #272A37;
+
+$ag-light-border: #f2f2f3;
+$ag-dark-border: #1a1e2b;
+$ag-light-body-text: #272a37;
+$ag-dark-body-text: #f2f2f3;
+$ag-header-text: #8c8e95;
+$ag-light-selection: #e9effe;
+$ag-dark-selection: #0d1e4b;
+$ag-light-selection-border: #b5c9fd;
+$ag-dark-selection-border: #5583fa;
+$ag-light-hover: #f2f2f3;
+$ag-dark-hover: #272a37;
+$ag-light-action-text: #747781;
+$ag-dark-action-text: #8c8e95;
+$ag-light-verticalbar: #bfc1c5;
+$ag-dark-verticalbar: #41444f;
+
+$heatmap_timebar_bg-light: #f7f9ff;
+$heatmap_timebar_border-light: #e6e7e8;
+$heatmap_timebar_bg-dark: #1a1e2b;
+$heatmap_timebar_border-dark: #1a1e2b;
+
+$webinar-light-blue-bg-100: #f7f9ff;
+$webinar-light-blue-border-100: #e6e7e8;
+$webinar-light-blue-border-200: #b5c9fd;
+$webinar-purple-100: #f1ecf7;
+$webinar-purple-200: #9d7ec6;
+$webinar-red: #cf262b;
+
+$webinar-dark-blue-bg-100: #050e2b;
+$webinar-dark-blue-bg-200: #091637;
+$webinar-dark-blue-border-100: #272a37;
+$webinar-dark-blue-border-200: #204bbb;
+$webinar-purple-100: #f1ecf7;
+$webinar-purple-200: #9d7ec6;
+$webinar-red: #cf262b;
+
+// dropdown text
+$dropdown-text-color-light: #272a37;
+$dropdown-text-color-dark: #dbdcde;
+
+$notes-dropdown-hover-light: #f2f2f3;
+$notes-dropdown-hover-dark: #0d1e4b;
+$tiptap-bg-light: #e9effe;
+$tiptap-bg-dark: #112864;
+
+// text colors
+$text-light-primary: #f4f4f4;
+$text-light-secondary: #d9d9d9;
+$text-light-tertiary: #dbdcde;
+$text-light-quaternary: #747781;
+$text-light-muted: #8c8e95;
+$text-light-quaternary: #8c8e95;
+
+$text-dark-primary: #272a37;
+$text-dark-secondary: #5a5c66;
+$text-dark-tertiary: #41444f;
+$text-dark-quaternary: #747781;
+$text-dark-muted: #8c8e95;
+$text-grey-100: #a7a9ae;
+
+$text-light-futureactivity: #1a1e2b;
+$text-dark-futureactivity: #f2f2f3;
+
+$text-light-blue: #b5c9fd;
+
+// webkit scrollbar
+$webkitscrollBar-light: #bfc1c5;
+$webkitscrollBar-dark: #41444f;
+
+//user-icon colors
+$user-icon-bg-light: #7447ae;
+$user-icon-bg-dark: #633d99;
+
+// spaced
+$space: 10px;
+$radius: 4px;
+
+// borders
+$border-width-general: 1px solid #74747480;
+$border-width-light: 1px solid #dbdcde;
+$border-width-dark: 1px solid #74747480;
+
+//MarketOverView
+$marketOverview-tab_light: #f6f9ff;
+$marketOverview-tab_dark: #222633;
+$selectPicker-border_light: #b5c9fd;
+$selectPicker-border_dark: #112864;
+
+$profilebg: #112864;
+
+// shadow
+$shadow-general: 0px 8px 16px rgba(96, 97, 112, 0.05);
+$shadow-sm: 0px 8px 16px 0px rgba(96, 97, 112, 0.16), 0px 2px 4px 0px rgba(40, 41, 61, 0.04);
+
+// font size
+$fontsize-large12: 84px; //5.25rem; // 55px
+$fontsize-large11: 72px; // 4.5rem; // 55px
+$fontsize-large10: 55px; //3.4375rem; // 55px
+$fontsize-large9: 42px; // 2.625rem; // 42px
+$fontsize-large8: 34px; // 2.125rem; // 34px
+$fontsize-large7: 26px; // 1.625rem; // 26px
+$fontsize-large6: 24px; // 1.5rem; // 24px
+$fontsize-large5: 22px; // 1.375rem; // 22px
+$fontsize-large4: 20px; // 1.25rem; // 20px
+$fontsize-large3: 18px; // 1.125rem; // 18px
+$fontsize-large2: 16px; // 1rem; // 16px
+$fontsize-large1: 14px; // 0.875rem; // 14px
+$fontsize-default: 12px; // 0.75rem; // 12px
+$fontsize-small1: 11px; // 0.6875rem; // 11px
+$fontsize-small2: 10px; // 0.625rem; // 10px
+$fontsize-small3: 8px; // 0.5rem; // 8px
+
+$fontsize-default: 12px; // 0.75rem; // 12px
+
+// font family
+$fontfamily-primary: "Roboto", sans-serif;
+
+$stock-modal-text-light: #5a5c66;
+$stock-modal-text-dark: #dbdcde;
+$webinar-modal-border-light: #e6e7e8;
+$webinar-modal-border-dark: #272a37;
+//copy-link
+$webinar-modal-copy-link-light: #2b64f9;
+$webinar-modal-copy-link-dark: #5583fa;
+
+//
+$price-performance-bar-light: #e6e7e8;
+$price-performance-bar-dark: #41444f;
+
+//
+$shareholdinggraph-purple-light: #7447ae;
+$shareholdinggraph-purple-dark: #9d7ec6;
+
+$shareholdinggraph-cyan-light: #00aeae;
+$shareholdinggraph-cyan-dark: #4cc6c6;
+
+$shareholdinggraph-greenv1: #4fbb6e;
+$shareholdinggraph-greenv2: #166531;
+
+$stockFuturesTableFooter-light-bg: #f7f9ff;
+$stockFuturesTableFooter-dark-bg: #050e2b;
+
+$ticket-status-open-background-light: #ffeed9;
+$ticket-status-open-background-dark: #4e2d0e;
+
+$ticket-status-open-text-light: #bf6905;
+$ticket-status-open-text-dark: #ffd7a6;
+
+$ticket-status-open-border-light: #ffae4c;
+$ticket-status-open-border-dark: #bf6905;
+//
+$calendar-purple-light: #7447ae;
+$calendar-purple-dark: #9d7ec6;
+$calendar-bg-purple-light: #f1ecf7;
+$calendar-bg-purple-dark: #241843;
+
+$calendar-yellow-light: #bf6905;
+$calendar-yellow-dark: #ff8b00;
+$calendar-bg-yellow-light: #ffeed9;
+$calendar-bg-yellow-dark: #bf6905;
+
+$calendar-cyan-light: #008387;
+$calendar-cyan-dark: #00aeae;
+$calendar-bg-cyan-light: #e5f7f7;
+$calendar-bg-cyan-dark: #013843;
+
+$calendar-blue-light: #2b64f9;
+$calendar-blue-dark: #5583fa;
+$calendar-bg-blue-light: #e9effe;
+$calendar-bg-blue-dark: #0d1e4b;
+
+$calendar-green-light: #1d863b;
+$calendar-green-dark: #4fbb6e;
+$calendar-bg-green-light: #e8f3eb;
+$calendar-bg-green-dark: #0a2b20;
+
+$calendar-bg-red-light: #fae9e9;
+$calendar-bg-red-dark: #37141d;
+// Global search tag colors
+$globalSearch-header-bg-light: #f7f9ff;
+$globalSearch-header-bg-dark: #050e2b;
+$globalSearch-header-light: #5a5c66;
+$globalSearch-header-dark: #8c8e95;
+$globalSearch-header-selected-dark: #5583fa;
+$globalSearch-header-selected-light: #2b64f9;
+
+$globalSearch-stock-tag-text-light: #008387;
+$globalSearch-stock-tag-text-dark: #a6e3e3;
+$globalSearch-stock-tag-bg-light: #e5f7f7;
+$globalSearch-stock-tag-bg-dark: #013843;
+
+$globalSearch-index-tag-text-light: #633d99;
+$globalSearch-index-tag-text-dark: #cebfe3;
+$globalSearch-index-tag-bg-light: #f1ecf7;
+$globalSearch-index-tag-bg-dark: #241843;
+
+$globalSearch-item-selected-dark: #272a37;
+$globalSearch-item-selected-light: #f2f2f3;
+
+$globalSearch-pod-bg-light: #ffffff;
+$globalSearch-pod-bg-dark: #131725;
+$globalSearch-pod-border-light: #e6e7e8;
+$globalSearch-pod-border-dark: #272a37;
+$globalSearch-pod-text-light: #5a5c66;
+$globalSearch-pod-text-dark: #dbdcde;
+$globalSearch-pod-text-selected-light: #272a37;
+$globalSearch-pod-text-selected-dark: #f2f2f3;
+$globalSearch-pod-border-selected-light: #2b64f9;
+$globalSearch-pod-border-selected-dark: #5583fa;
+$globalSearch-pod-bg-selected-dark: #0d1e4b;
+$globalSearch-pod-bg-selected-light: #f7f9ff;
+$globalSearch-noData-text_2-dark: #dbdcde;
+$globalSearch-noData-text_2-light: #5a5c66;
+
+$globalsearch-tool-tag: #ff8b00;
+$globalSearch-index-tag: #00aeae;
+$globalSearch-pod-bg: #f1ecf7;
+$globalSearch-pod-selected-border: #b5c9fd;
+// Password validation modal color
+$passwod-modal-text-light: #5a5c66;
+$passwod-modal-text-dark: #8c8e95;
+
+$calendar-hover: #cce9ff80;
+
+$overlay-gradient-light: linear-gradient(0deg, #d9d9d9 0%, rgba(217, 217, 217, 0) 100%);
+$overlay-gradient-dark: linear-gradient(0deg, #131725 0%, rgba(12, 20, 60, 0) 100%);
+
+$daily-rollover-footer-light-bg-color: #f7f9ff;
+$daily-rollover-footer-dark-bg-color: #050e2b;
+
+$rollover-header-text-light: #272a37;
+$rollover-header-text-dark: #ececee;
+
+$seasonalityChartOverLayLight: "rgba(255, 255, 255, 0.7)";
+$seasonalityChartOverLayDark: "rgba(19, 23, 37, 0.7)";

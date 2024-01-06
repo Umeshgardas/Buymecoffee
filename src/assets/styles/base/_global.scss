@@ -1,0 +1,124 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  // font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: $fontsize-default;
+    font-family: "Twemoji Country Flags", $fontfamily-primary !important;
+    background-color: $primary-light;
+    overflow: hidden;
+    caret-color: transparent;
+    #root {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      height: 100% !important;
+      width: 100% !important;
+      .App {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin-bottom: calc($space * 0);
+    }
+
+    input,
+    textarea {
+      caret-color: var(--text-primary);
+
+      &::-ms-reveal,
+      &::-ms-clear {
+        display: none;
+      }
+    }
+
+    #navLength {
+      visibility: hidden;
+      position: fixed;
+      top: -100vh;
+      left: 0;
+      width: fit-content;
+      height: 32px;
+      padding: calc($space / 1.25) calc($space / 1.25);
+      padding-right: calc($space * 4);
+      font-weight: 500;
+      font-size: $fontsize-default;
+      line-height: 136%;
+      color: var(--text-mute);
+      text-decoration: none;
+      background-color: $transparent;
+      z-index: 1;
+    }
+
+    #mergedSS {
+      // visibility: hidden;
+      position: fixed;
+      top: -600vh;
+      left: 0;
+      z-index: 0;
+
+      .inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-secondary);
+
+        #mergedgrid {
+        }
+
+        #mergedchart {
+          position: absolute;
+          top: 6%;
+          right: 0px;
+          object-fit: contain;
+
+          &.sentiment {
+            top: 8%;
+          }
+
+          &.stocks {
+            top: 14%;
+            right: 20px;
+
+            @media only screen and (max-height: 800px) {
+              top: 16%;
+            }
+            @media only screen and (max-height: 730px) {
+              top: 18%;
+            }
+            @media only screen and (max-height: 650px) {
+              top: 22%;
+            }
+          }
+        }
+
+        #watermark {
+          @include flexRowEnd();
+          width: 100%;
+          padding: calc($space * 0) calc($space * 1) calc($space * 1);
+        }
+      }
+    }
+   
+  }
+}

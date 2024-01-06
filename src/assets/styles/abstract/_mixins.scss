@@ -1,0 +1,499 @@
+/* mixins css */
+/*------------------------------------------------------------------------------------------------------------ */
+/* clearfix for floated elemments */
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* */
+/* Absolute property names as 'top', 'bottom', 'left', 'right' */
+/*  absCenter */
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* absTopLeft */
+@mixin absTopLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* absTopRight */
+@mixin absTopRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* absTopL */
+@mixin absTopLI($number) {
+  position: absolute;
+  top: 0;
+  left: $number;
+}
+
+/* absTopR */
+@mixin absTopRI($number) {
+  position: absolute;
+  top: 0;
+  right: $number;
+}
+
+/* absLeftT */
+@mixin absLeftTI($number) {
+  position: absolute;
+  left: 0;
+  top: $number;
+}
+
+/* absRightT */
+@mixin absRightTI($number) {
+  position: absolute;
+  right: 0;
+  top: $number;
+}
+
+/* absLeftT */
+@mixin absTLI($top, $left) {
+  position: absolute;
+  left: $left;
+  top: $top;
+}
+
+/* absLeftT */
+@mixin absTRI($top, $right) {
+  position: absolute;
+  right: $right;
+  top: $top;
+}
+
+/* absBottomLeft */
+@mixin absBottomLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* absBottomRight */
+@mixin absBottomRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* absBottomL */
+@mixin absBottomLI($number) {
+  position: absolute;
+  bottom: 0;
+  left: $number;
+}
+
+/* absBottomR */
+@mixin absBottomRI($number) {
+  position: absolute;
+  bottom: 0;
+  right: $number;
+}
+
+/* absLeftB */
+@mixin absLeftBI($number) {
+  position: absolute;
+  left: 0;
+  bottom: $number;
+}
+
+/* absRightB */
+@mixin absRightBI($number) {
+  position: absolute;
+  right: 0;
+  bottom: $number;
+}
+
+/* absLeftB */
+@mixin absBLI($bottom, $left) {
+  position: absolute;
+  left: $left;
+  bottom: $bottom;
+}
+
+/* absRightB */
+@mixin absBRI($bottom, $right) {
+  position: absolute;
+  right: $right;
+  bottom: $bottom;
+}
+
+/* Flex property names as 'display', 'justify', 'align', 'direction' */
+/* flexCenter */
+@mixin flexCenter($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+/* flexRowStart */
+@mixin flexRowStart() {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+/* flexRowStartCenter */
+@mixin flexRowStartCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+/* flexRowCenterStart */
+@mixin flexRowCenterStart() {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/* flexRowEnd */
+@mixin flexRowEnd() {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+/* flexRowEndCenter */
+@mixin flexRowEndCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+/* flexRowCenterEnd */
+@mixin flexRowCenterEnd() {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/* flexRowBetweenStart */
+@mixin flexRowBetweenStart() {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+/* flexRowBetweenEnd */
+@mixin flexRowBetweenEnd() {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+/* flexRowBetweenCenter */
+@mixin flexRowBetweenCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+/* flexRowCenterBetween */
+@mixin flexRowCenterBetween() {
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/* flexColumnStart */
+@mixin flexColumnStart() {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/* flexColumnStartCenter */
+@mixin flexColumnStartCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/* flexColumnCenterStart */
+@mixin flexColumnCenterStart() {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* flexColumnStartBetween */
+@mixin flexColumnStartBetween() {
+  display: flex;
+  align-items: space-between;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/* flexColumnBetweenStart */
+@mixin flexColumnBetweenStart() {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* flexColumnEnd */
+@mixin flexColumnEnd() {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+/* flexColumnEndCenter */
+@mixin flexColumnEndCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+/* flexColumnCenterEnd */
+@mixin flexColumnCenterEnd() {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*------------------------------------------------------------------------------------------------------------ */
+
+/* WEBKIT SCROLLBAR*/
+@mixin WebkitScrollbar() {
+  overflow: hidden !important;
+
+  &:hover {
+    overflow: auto !important;
+
+    @supports (overflow: overlay) {
+      overflow: overlay !important;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--webkit-scrollbar);
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--webkit-scrollbar);
+  }
+}
+
+@mixin WebkitScrollbarY() {
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  &:hover {
+    overflow-y: auto;
+
+    @supports (overflow-y: overlay) {
+      overflow-y: overlay;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--webkit-scrollbar);
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--webkit-scrollbar);
+  }
+}
+
+@mixin WebkitScrollbarX() {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+
+  &:hover {
+    overflow-x: auto !important;
+
+    @supports (overflow-x: overlay) {
+      overflow-x: overlay !important;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--webkit-scrollbar);
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--webkit-scrollbar);
+  }
+}
+
+@mixin WebkitScrollYFixedWidth {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  &:hover {
+    scrollbar-color: var(--webkit-scrollbar) transparent;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: var(--webkit-scrollbar);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------ */
+
+/* MEDIA QUERY MANAGER */
+/*
+  0 - 600px:         Phone
+  600 - 1024px:      Tablet portrait
+  1024 - 1200px:     Tablet landscape
+  1200 - 1440px:     Desktop Normal
+  1440+px:           Desktop Large
+  $breakpoint arguement choices:
+  - phone-sm
+  - phone
+  - phone-lg
+  - tab-sm
+  - tab
+  - tab-lg
+  - desktop-sm
+  - desktop
+  - desktop-lg
+  ORDER: Base + typography > general layout + grid > page layout > components
+  1em = 16px
+*/
+@mixin res($breakpoint) {
+  @if $breakpoint ==phone-sm {
+    @media only screen and (max-width: 360px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==phone {
+    @media only screen and (max-width: 450px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==phone-lg {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tab-sm {
+    @media only screen and (max-width: 769px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tab {
+    @media only screen and (max-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tab-lg {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==desk-sm {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==desk {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==desk-lg {
+    @media only screen and (min-width: 1441px) {
+      @content;
+    }
+  }
+}
+
+/* custome responsive mixin */
+@mixin cusResponsive($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

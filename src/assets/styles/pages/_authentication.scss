@@ -1,0 +1,1017 @@
+.authentication {
+  height: 100%;
+  width: 100%;
+  // margin: calc($space *6);
+  @include flexCenter(row);
+  background-color: $primary-bg-light !important;
+  .container {
+    // border: 1px solid red;
+    @include flexCenter(row);
+    width: 80%;
+    height: 600px;
+
+    ._left {
+      width: 30%;
+      height: 100%;
+      // display: flex;
+      // flex-direction: column;
+      // padding: 5% 3%;
+      background-color: $primary-orange !important;
+
+      @include res(tab-lg) {
+        display: none;
+      }
+
+      .top {
+        height: 10%;
+        width: 100%;
+        z-index: 99;
+
+        .logodiv {
+          width: 150px;
+          height: 80px;
+          @include flexCenter(column);
+
+          .logo {
+            // height: 33px;
+            // width: 118px;
+            width: 100%;
+            height: 50px;
+          }
+        }
+      }
+
+      .bottom {
+        @include flexCenter(column);
+        flex: 1;
+        width: 100%;
+        height: 90%;
+
+        .watchlist {
+          @include flexCenter(column);
+          height: 100%;
+          width: 100%;
+
+          .carousel {
+            width: 100%;
+
+            .slider {
+              width: 100%;
+
+              .slide {
+                width: 100%;
+                //   height: 334px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .ImageRes-container {
+                  width: 100%;
+                  max-height: calc(100% - 200px);
+                  margin-bottom: calc($space * 4.8);
+                  padding-top: 15%;
+                }
+
+                .ImageRes-container-img {
+                  width: 100%;
+                  object-fit: contain;
+                }
+
+                p {
+                  font-weight: 600;
+                  font-size: $fontsize-large6;
+                  line-height: 150%;
+                  color: $primary-light;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    ._right {
+      height: 100%;
+      width: 70%;
+      background-color: $secondary-light;
+      @include flexCenter(column);
+      // border: 1px solid red;
+
+      @include res(tab-lg) {
+        width: 100%;
+        height: 100vh;
+        @include flexColumnStartCenter();
+      }
+
+      .logo {
+        @include flexRowStart();
+        width: 100%;
+        height: 50px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin: calc($space * 1.8) calc($space * 0) calc($space * 1.6);
+        padding-left: calc($space * 0.8);
+        padding-bottom: calc($space * 1.6);
+        display: none;
+        border-bottom: 1px solid var(--border-color);
+
+        @include res(tab-lg) {
+          display: flex;
+        }
+
+        .ImageRes-container {
+          width: fit-content;
+        }
+      }
+
+      .error-box {
+        margin-top: calc($space / 1.25);
+        padding: calc($space / 1.25);
+        border: 1px solid var(--primary-red);
+        background-color: var(--tag-bg-red);
+        color: var(--text-primary);
+        border-radius: $radius;
+        font-weight: 400;
+        font-size: $fontsize-default;
+        line-height: 130%;
+      }
+
+      ._signup,
+      ._login,
+      ._forgot,
+      ._mobileverification,
+      ._getotp,
+      ._newPassword,
+      ._resetlink_sent {
+        // height: 70vh;
+        background-color: $secondary-light;
+        @include flexColumnStartCenter();
+
+        @include res(tab-lg) {
+          width: 100% !important;
+          height: calc(100vh - 78px) !important;
+          padding: calc($space * 0) calc($space * 1.6);
+        }
+
+        .resetlink {
+          width: 100%;
+
+          @include res(tab-lg) {
+            height: calc(100vh - 200px);
+            flex-shrink: 0;
+            @include WebkitScrollbarY();
+          }
+
+          .header {
+            h4 {
+              font-weight: 600;
+              font-size: $fontsize-large8;
+              line-height: 150%;
+              color: var(--text-primary);
+              margin-bottom: calc($space / 2.5);
+
+              @include res(tab-lg) {
+                font-size: $fontsize-large7;
+              }
+            }
+
+            p {
+              margin-bottom: calc($space * 2);
+              font-style: normal;
+              font-weight: 400;
+              font-size: $fontsize-large1;
+              line-height: 140%;
+              color: var(--text-secondary);
+            }
+          }
+
+          .resendmaillinks {
+            width: 100%;
+            margin-bottom: calc($space * 3.2);
+            @include flexRowBetweenCenter();
+
+            @include res(tab-lg) {
+              @include flexColumnStart();
+            }
+
+            .forgot {
+              background-color: $transparent;
+              font-style: normal;
+              font-weight: 500;
+              font-size: $fontsize-default;
+              line-height: 130%;
+              color: var(--primary-blue);
+
+              @include res(tab-lg) {
+                font-size: $fontsize-large1;
+                margin-bottom: calc($space * 2);
+              }
+            }
+          }
+        }
+
+        &-bottom {
+          @include flexCenter(column);
+          width: 100%;
+
+          @include res(tab-lg) {
+            height: 100px;
+            flex-shrink: 0;
+          }
+
+          a {
+            font-style: normal;
+            font-weight: 500;
+            font-size: $fontsize-default;
+            line-height: 130%;
+            color: var(--primary-blue);
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            width: 100%;
+            border: 1px solid var(--primary-blue);
+            border-radius: $radius;
+            padding: calc($space / 1.25);
+            margin-bottom: calc($space * 2);
+
+            &:hover {
+              background-color: var(--primary-blue);
+              color: var(--white);
+            }
+
+            button {
+              background-color: $transparent;
+              border: none;
+              outline: none;
+            }
+          }
+
+          ._linkpara {
+            font-style: normal;
+            font-weight: 400;
+            font-size: $fontsize-default;
+            line-height: 130%;
+            color: var(--text-primary);
+
+            .link {
+              font-style: normal;
+              font-weight: 500;
+              font-size: $fontsize-default;
+              line-height: 130%;
+              color: var(--primary-blue);
+              background-color: $transparent;
+              border: none;
+              outline: none;
+            }
+          }
+        }
+
+        .loading {
+          @include flexCenter(row);
+          // min-width: 25rem;
+          // max-width: 25rem;
+          width: 20.5rem;
+          height: 0.625rem;
+          gap: 10px;
+          margin-bottom: calc($space * 1.6);
+
+          @include res(tab-lg) {
+            width: 100%;
+          }
+
+          .bar {
+            height: 50%;
+            width: 50%;
+            border-radius: 4px;
+            background-color: $border-light;
+
+            @include res(tab-lg) {
+              height: 4px;
+            }
+          }
+        }
+
+        .form {
+          @include flexColumnStartCenter();
+          @include flexCenter(column);
+          text-align: left;
+          // min-width: 25rem;
+          // max-width: 25rem;
+          width: 338px;
+          height: 100%;
+          font-family: "Roboto" !important;
+          position: relative;
+
+          @include res(tab-lg) {
+            @include flexColumnStartCenter();
+            width: 100% !important;
+            height: 100% !important;
+            padding-bottom: calc($space * 10);
+            position: relative;
+            @include WebkitScrollbarY();
+          }
+
+          &-top {
+            width: 100%;
+            @include res(tab-lg) {
+              // height: 100%;
+              flex-shrink: 0;
+            }
+          }
+
+          &-bottom {
+            @include flexCenter(column);
+            width: 100%;
+
+            @include res(tab-lg) {
+              height: 100px;
+              flex-shrink: 0;
+              // position: absolute;
+              // bottom: 0px;
+              // left: 0px;
+            }
+          }
+
+          &.verify {
+            .form-top {
+              flex: 1;
+            }
+            .form-bottom {
+              height: fit-content;
+              padding-bottom: calc($space * 1.6);
+            }
+          }
+
+          #invalidemail {
+            border: 1px solid $red-light-100 !important;
+          }
+
+          #invalidMsg {
+            width: 100%;
+            color: $red-light-100 !important;
+          }
+
+          .header {
+            margin-bottom: calc($space * 0.4);
+            font-style: normal;
+            flex: none;
+            flex-grow: 0;
+            width: 100%;
+
+            @include res(tab-lg) {
+              margin-bottom: calc($space * 2.8);
+            }
+
+            h4 {
+              font-weight: 600;
+              font-size: $fontsize-large8 !important;
+              line-height: 150%;
+              color: $text-dark-primary !important;
+              order: 0;
+
+              @include res(tab-lg) {
+                font-size: $fontsize-large7 !important;
+              }
+            }
+
+            p {
+              margin-top: calc($space / 2.5);
+              font-weight: 400;
+              font-size: $fontsize-default;
+              line-height: 130%;
+              color: $text-dark-secondary;
+            }
+
+            span {
+              margin-top: calc($space / 2.5);
+              font-weight: 400;
+              font-size: $fontsize-large1;
+              line-height: 140%;
+              color: $text-dark-secondary;
+            }
+          }
+
+          .fullname {
+            width: 100%;
+            gap: 1rem;
+            @include flexRowBetweenCenter();
+            text-align: left;
+
+            @include res(tab-lg) {
+              @include flexColumnStart();
+              gap: 0px;
+            }
+
+            .firstname,
+            .lastname {
+              @include flexCenter(column);
+              width: 90%;
+
+              @include res(tab-lg) {
+                width: 100%;
+              }
+            }
+          }
+
+          label {
+            margin-top: calc($space * 1.6);
+            width: 100%;
+            color: $text-light-muted;
+            font-weight: 500;
+            font-size: $fontsize-small2;
+            line-height: 120%;
+          }
+
+          input {
+            border: 1px solid $text-light-muted !important;
+            outline: none !important;
+            padding: calc($space / 1.25) calc($space / 1.66);
+            margin: calc($space / 2.5) calc($space * 0);
+            width: 100%;
+            color: $text-light-muted !important;
+            caret-color: black;
+            border-radius: 4px;
+
+            &.error-input {
+              border: 1px solid var(--primary-red) !important;
+
+              & + p {
+                font-weight: 400;
+                font-size: $fontsize-default;
+                line-height: 130%;
+                color: var(--primary-red);
+                margin-bottom: calc($space * 1);
+                @include res(tab-lg) {
+                  margin-top: calc($space * -1.6);
+                }
+              }
+            }
+          }
+
+          input:focus {
+            padding: calc($space / 1.25) calc($space / 1.66);
+            margin: calc($space / 2.5) calc($space * 0);
+            width: 100%;
+            color: $text-dark-primary !important;
+            border: 1px solid $blue-light-200 !important;
+            border-radius: 4px;
+
+            &.error-input {
+              border: 1px solid var(--primary-red) !important;
+
+              & + p {
+                font-weight: 400;
+                font-size: $fontsize-default;
+                line-height: 130%;
+                color: var(--primary-red);
+                margin-bottom: calc($space * 1);
+              }
+            }
+          }
+
+          .forgot {
+            margin: calc($space / 1.25) calc($space * 0) calc($space * 0);
+            align-self: flex-end;
+            background-color: transparent;
+            cursor: pointer;
+            color: $blue-light-200 !important;
+            color: $text-dark-primary;
+          }
+
+          .ghostbutton {
+            // width: 100%;
+            // color: $secondary-light !important;
+            // cursor: pointer;
+            // border-radius: 4px;
+            // font-size: $fontsize-default;
+            // font-weight: 500;
+            // padding: calc($space * 1.2) calc($space * 4.5);
+            // margin-top: calc($space * 3.4);
+          }
+
+          ._linkpara {
+            margin-top: calc($space * 2.8);
+            font-weight: 400;
+            font-size: $fontsize-default;
+            line-height: 130%;
+            color: $text-dark-primary !important;
+
+            .link {
+              font-weight: 500;
+              background-color: transparent;
+              border-color: $secondary-light;
+              cursor: pointer;
+              color: $blue-light-200;
+              transition: transform 80ms ease-in;
+
+              input {
+                color: $text-dark-primary;
+                width: 100%;
+              }
+            }
+          }
+
+          label {
+            margin-top: calc($space * 1.6);
+            width: 100%;
+            color: $text-light-muted;
+            font-weight: 500;
+            font-size: $fontsize-small2;
+            line-height: 120%;
+
+            @include res(tab-lg) {
+              margin-top: calc($space * 0);
+            }
+          }
+
+          input {
+            border: 1px solid $grey-1 !important;
+            outline: none !important;
+            padding: calc($space / 1.25);
+            margin: calc($space / 2.5) calc($space * 0);
+            border-radius: 4px;
+            width: 100%;
+            height: 32px;
+            color: $text-dark-primary !important;
+
+            @include res(tab-lg) {
+              margin-bottom: calc($space * 2);
+            }
+
+            &.error-input {
+              border: 1px solid var(--primary-red) !important;
+
+              & + p {
+                font-weight: 400;
+                font-size: $fontsize-default;
+                line-height: 130%;
+                color: var(--primary-red);
+                margin-bottom: calc($space * 1);
+              }
+            }
+          }
+
+          input:focus {
+            border: 1px solid $blue-light-200 !important;
+            outline: none !important;
+            padding: calc($space / 1.25);
+            margin: calc($space / 2.5) calc($space * 0);
+            border-radius: 4px;
+            width: 100%;
+            height: 32px;
+            color: $text-dark-primary !important;
+
+            @include res(tab-lg) {
+              margin-bottom: calc($space * 2);
+            }
+
+            &.error-input {
+              border: 1px solid var(--primary-red) !important;
+
+              & + p {
+                font-weight: 400;
+                font-size: $fontsize-default;
+                line-height: 130%;
+                color: var(--primary-red);
+                margin-bottom: calc($space * 1);
+              }
+            }
+          }
+
+          /* Forgot Link */
+          .forgot {
+            margin: calc($space * 1.2) calc($space * 0) calc($space / 5);
+            font-weight: 500;
+            line-height: 130%;
+            align-self: flex-end;
+            background-color: transparent;
+            cursor: pointer;
+            color: $blue-light-200 !important;
+
+            @include res(tab-lg) {
+              margin-top: calc($space * 0);
+            }
+          }
+
+          /* All Submit Buttons  */
+          // .ghostbutton {
+          //   width: 100%;
+          //   height: 32px;
+          //   padding: calc($space / 1.25);
+          //   color: $secondary-light !important;
+          //   cursor: pointer;
+          //   border-radius: 4px;
+          //   font-size: $fontsize-default;
+          //   font-weight: 500;
+          //   margin-top: calc($space * 3.2);
+
+          //   @include res(tab-lg) {
+          //     margin-top: calc($space * 1);
+          //   }
+          // }
+
+          /* GetOTP Submit Button */
+          .ghostbuttonOTP {
+            width: 100%;
+            height: 32px;
+            text-align: center;
+            color: $secondary-light !important;
+            cursor: pointer;
+            font-size: $fontsize-default;
+            font-weight: 500;
+            margin-top: calc($space * 2);
+            border-radius: 4px;
+          }
+
+          /* Bottom Login and Sign up Links */
+          ._linkpara {
+            margin-top: calc($space * 2);
+            font-weight: 400;
+            font-size: $fontsize-default;
+            line-height: 130%;
+            color: $text-dark-primary !important;
+
+            .link {
+              font-weight: 500;
+              background-color: transparent;
+              border-color: $secondary-light;
+              cursor: pointer;
+              color: $blue-light-200 !important;
+              transition: transform 80ms ease-in;
+            }
+          }
+
+          /* Edit number */
+          .edit_number {
+            margin-top: calc($space * 2);
+            width: 100%;
+            display: flex;
+            color: $text-dark-secondary !important;
+
+            b {
+              color: $text-dark-primary !important;
+            }
+
+            ._linkpara {
+              font-weight: 500;
+              line-height: 130%;
+              margin: calc($space * 0) calc($space * 0) calc($space * 0)
+                calc($space / 1.25);
+            }
+          }
+
+          /* Verified OTP Input Fields */
+          .verify_otp {
+            margin-top: calc($space * 2);
+            width: 100%;
+
+            p {
+              color: $text-light-muted !important;
+              font-size: $fontsize-small2;
+              font-weight: 500;
+              line-height: 120%;
+            }
+
+            // Hide Input Type Number Arrow
+
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            /* Firefox */
+            input[type="number"] {
+              -moz-appearance: textfield;
+            }
+
+            .otp-field {
+              height: 28px;
+              width: 28px;
+              margin-right: calc($space * 1.6);
+              padding: calc($space / 1) calc($space / 1) calc($space / 1.66);
+            }
+          }
+
+          /* Resend OTP Link */
+          .resend_otp {
+            margin-top: calc($space * 1.2);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            color: $text-dark-secondary !important;
+
+            .checkIcon {
+              width: 16px;
+              height: 16px;
+              border: none;
+              color: $green-light-100;
+              border-radius: 50%;
+              margin-right: calc($space / 5);
+              cursor: pointer;
+            }
+
+            .cancelIcon {
+              width: 16px;
+              height: 16px;
+              border: none;
+              color: $red-light-100;
+              border-radius: 50%;
+              margin-right: calc($space / 5);
+              cursor: pointer;
+            }
+
+            ._linkpara {
+              font-weight: 500;
+              // line-height: 130%;
+              margin-top: calc($space * 0);
+              .link {
+                max-height: fit-content !important;
+                padding: 0 !important;
+              }
+            }
+          }
+
+          /* Critical Update & tool Knowledge */
+          .critical_updates {
+            margin-top: calc($space * 3.2);
+            width: 100%;
+            font-weight: 400;
+            font-size: $fontsize-small2;
+            line-height: 120%;
+            color: $text-dark-secondary !important;
+          }
+
+          /* Terms and Condition */
+          .terms_condition {
+            @include flexColumnStart();
+            margin-top: calc($space / 1.25);
+            width: 100%;
+            gap: calc($space / 1.25);
+            height: 48px;
+
+            .update_whatsapp,
+            .terms {
+              @include flexRowStartCenter();
+              width: 100%;
+              height: 20px;
+
+              p {
+                font-size: $fontsize-default;
+                line-height: 130%;
+                font-weight: 400;
+              }
+
+              input[type="checkbox"] {
+                display: none;
+                /* hide the default checkbox */
+              }
+
+              /* unchecked state */
+              label {
+                margin: calc($space / 1.25) calc($space / 1.25)
+                  calc($space / 1.25) calc($space * 0);
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                padding: calc($space * 0);
+                border: 2px solid $blue-light-200;
+                border-radius: 4px;
+              }
+
+              /* checked state */
+              input[type="checkbox"]:checked + label {
+                border-color: $blue-light-200;
+                background-color: $blue-light-200;
+                color: $secondary-light;
+              }
+
+              /* checkmark */
+              label::before {
+                content: "";
+                display: block;
+                text-align: center;
+                line-height: 12px;
+                font-size: $fontsize-small2;
+              }
+
+              input[type="checkbox"]:checked + label::before {
+                content: "\2714";
+                font-size: $fontsize-small2;
+              }
+            }
+          }
+
+          .resetlink {
+            .header {
+              p {
+                font-weight: 400;
+                font-size: $fontsize-large1;
+                line-height: 140%;
+                color: $text-dark-secondary;
+                margin: calc($space * 0) calc($space * 0) calc($space * 2);
+
+                b {
+                  color: $text-dark-primary;
+                }
+              }
+            }
+
+            .resendmaillinks {
+              width: 100%;
+              @include flexRowBetweenStart();
+              background-color: transparent;
+              cursor: pointer;
+              font-weight: 500;
+              line-height: 130%;
+              color: $blue-light-200 !important;
+            }
+          }
+
+          .contactusbutton {
+            color: $blue-light-200;
+            background-color: $secondary-light;
+            border: 1px solid $blue-light-200 !important;
+            @include flexCenter(row);
+            width: 100%;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: $fontsize-default;
+            font-weight: 500;
+            height: 32px;
+            margin-top: calc($space * 3.2);
+          }
+        }
+      }
+
+      ._login {
+        height: 70vh;
+
+        .form {
+          @include flexCenter(column);
+          padding-bottom: calc($space * 10);
+
+          @include res(tab-lg) {
+            @include flexColumnStartCenter();
+            width: 100% !important;
+            height: 100% !important;
+            position: relative;
+            @include WebkitScrollbarY();
+          }
+
+          &-top {
+            width: 100%;
+            @include res(tab-lg) {
+              // height: calc(100vh - 185px);
+              // flex-shrink: 0;
+              // padding-bottom: calc($space * 10);
+            }
+          }
+
+          &-bottom {
+            @include flexCenter(column);
+            width: 100%;
+
+            @include res(tab-lg) {
+              height: 100px;
+              // flex-shrink: 0;
+              // position: absolute;
+              // bottom: 0px;
+              // left: 0px;
+            }
+          }
+        }
+      }
+
+      /* Free Trial Sign up Last page */
+      ._freetrial {
+        background-color: $secondary-light;
+        @include flexCenter(column);
+
+        @include res(tab-lg) {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-55%);
+          -webkit-transform: translateY(-55%);
+          -moz-transform: translateY(-55%);
+          -ms-transform: translateY(-55%);
+          -o-transform: translateY(-55%);
+        }
+
+        .container {
+          @include flexCenter(column);
+          text-align: center;
+          width: 20.5rem;
+          height: 25.25rem;
+
+          @include res(tab-lg) {
+            @include flexCenter(column);
+            width: 100% !important;
+            height: 100% !important;
+            position: relative;
+          }
+
+          &.onDesktop {
+            display: block;
+
+            @include res(tab-lg) {
+              display: none;
+            }
+          }
+
+          &.onMobile {
+            display: none;
+
+            @include res(tab-lg) {
+              display: flex;
+            }
+          }
+
+          &-top {
+            @include flexCenter(column);
+            width: 100%;
+
+            @include res(tab-lg) {
+              height: calc(100vh - 185px);
+              flex-shrink: 0;
+            }
+          }
+
+          &-bottom {
+            @include flexCenter(column);
+            width: 100%;
+
+            @include res(tab-lg) {
+              height: 100px;
+              flex-shrink: 0;
+            }
+          }
+
+          .freetrial_logo {
+            width: 12.2rem;
+            height: 12.2rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            .trial_logo {
+              height: 6.4rem;
+              width: 11.6rem;
+            }
+          }
+
+          .freetrial_content {
+            @include flexCenter(column);
+            width: 20.5rem;
+            height: 8.75rem;
+
+            @include res(tab-lg) {
+              height: auto;
+            }
+
+            h4 {
+              margin-bottom: calc($space / 2.5);
+              font-weight: 600;
+              font-size: $fontsize-large8;
+              line-height: 150%;
+              text-align: center;
+              color: $text-dark-primary !important;
+
+              @include res(tab-lg) {
+                font-size: $fontsize-large4;
+              }
+            }
+
+            span {
+              font-weight: 400;
+              font-size: $fontsize-large1;
+              line-height: 140%;
+              text-align: center;
+              color: $text-dark-secondary !important;
+
+              @include res(tab-lg) {
+                font-size: $fontsize-default;
+              }
+            }
+          }
+
+          .ghostbutton {
+            width: 90%;
+            height: 2rem;
+            text-align: center;
+            background-color: $blue-light-200 !important;
+            color: $secondary-light !important;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: $fontsize-default;
+            font-weight: 500;
+            margin-top: calc($space * 3.2);
+
+            @include res(tab-lg) {
+              margin-top: calc($space * 10);
+            }
+          }
+        }
+      }
+    }
+  }
+}
