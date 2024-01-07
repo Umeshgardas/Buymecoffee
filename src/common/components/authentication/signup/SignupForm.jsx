@@ -70,9 +70,10 @@ const SignupForm = ({ state, setState = () => {}, onSuccess = () => {} }) => {
           Sign up with Google
           <LuArrowRight />
         </div>
-        <span>
-          -----------------------------------------Or----------------------------------------
-        </span>
+        <div className="or">
+        <span className="horizontal-line"></span>Or
+        <span className="horizontal-line"></span>
+        </div>
         <InputBox
           name={"email"}
           placeholder={"Your email"}
@@ -107,8 +108,7 @@ const SignupForm = ({ state, setState = () => {}, onSuccess = () => {} }) => {
           </span>
         </div>
         <p className="_linkpara">
-          Already have an account?{" "}
-          <span className="link">Login</span>
+          Already have an account? <span className="link">Login</span>
         </p>
       </div>
     </form>
