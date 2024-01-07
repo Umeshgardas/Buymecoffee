@@ -15,8 +15,6 @@ const InputBox = ({
     return errMsg.length > 0;
   }, [errMsg]);
   return (
-    <div className={wrapperClassName}>
-      <label htmlFor={wrapperClassName}>{label}</label>
       <input
         type={type}
         name={name}
@@ -26,8 +24,6 @@ const InputBox = ({
         required={required}
         className={isError ? `error-input ${inputClassName}` : inputClassName}
       />
-      {isError > 0 && <p>{errMsg}</p>}
-    </div>
   );
 };
 export default InputBox;

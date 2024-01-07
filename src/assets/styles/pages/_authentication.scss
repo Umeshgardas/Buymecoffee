@@ -1,6 +1,8 @@
 .authentication {
   height: 100%;
   width: 100%;
+  font-family: "Poppins", sans-serif !important;
+
   // margin: calc($space *6);
   @include flexCenter(row);
   background-color: $primary-bg-light !important;
@@ -13,9 +15,6 @@
     ._left {
       width: 30%;
       height: 100%;
-      // display: flex;
-      // flex-direction: column;
-      // padding: 5% 3%;
       background-color: $primary-orange !important;
 
       @include res(tab-lg) {
@@ -23,20 +22,36 @@
       }
 
       .top {
-        height: 10%;
+        height: 40%;
         width: 100%;
         z-index: 99;
+        padding: calc($space * 3);
 
         .logodiv {
-          width: 150px;
-          height: 80px;
-          @include flexCenter(column);
-
+          width: 100%;
+          height: 100%;
+          color: $primary-light;
+          font-family: "Poppins", sans-serif;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
           .logo {
-            // height: 33px;
-            // width: 118px;
-            width: 100%;
-            height: 50px;
+            width: 40px;
+            height: 60px;
+            svg {
+              height: 100%;
+              width: 100%;
+              color: $secondary-light;
+              object-fit: contain;
+            }
+          }
+          .starting_page {
+            span {
+              font-size: $fontsize-large7;
+              color: $secondary-light;
+              line-height: 150%;
+              font-family: "Poppins";
+            }
           }
         }
       }
@@ -45,36 +60,73 @@
         @include flexCenter(column);
         flex: 1;
         width: 100%;
-        height: 90%;
+        height: 60%;
 
         .watchlist {
-          @include flexCenter(column);
           height: 100%;
           width: 100%;
 
           .carousel {
+            height: 100%;
             width: 100%;
 
             .slider {
               width: 100%;
-
+              height: 334px;
+              .container_top {
+                height: 10px;
+                padding: 0 calc($space * 3);
+              }
               .slide {
-                width: 100%;
-                //   height: 334px;
+                width: 20px;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
 
+                .profile {
+                  display: flex;
+                  align-items: center;
+                  gap: 1rem;
+                  height: 80px;
+                  color: $primary-light;
+                  .profile_data {
+                    @include flexColumnStartCenter();
+                    .tagline {
+                      font-size: $fontsize-small2;
+                    }
+                  }
+                }
+
+                p {
+                  margin: 0;
+                  font-weight: 400 !important;
+                  font-size: $fontsize-large1 !important;
+                }
+
+                .twitter-icon {
+                  margin-top: $space;
+                  color: $primary-light;
+                  height: 20px;
+                  width: 20px;
+                }
+
                 .ImageRes-container {
-                  width: 100%;
+                  width: 40px;
+                  height: 40px;
                   max-height: calc(100% - 200px);
                   margin-bottom: calc($space * 4.8);
-                  padding-top: 15%;
                 }
 
                 .ImageRes-container-img {
-                  width: 100%;
+                  width: 40px;
+                  height: 40px;
                   object-fit: contain;
+                  // border: 1px solid red;
+                  border-radius: 70% !important;
+                  -webkit-border-radius: 70% !important;
+                  -moz-border-radius: 70% !important;
+                  -ms-border-radius: 70% !important;
+                  -o-border-radius: 70% !important;
                 }
 
                 p {
@@ -116,7 +168,7 @@
         border-bottom: 1px solid var(--border-color);
 
         @include res(tab-lg) {
-          display: flex;
+          display: none;
         }
 
         .ImageRes-container {
@@ -148,8 +200,8 @@
         @include flexColumnStartCenter();
 
         @include res(tab-lg) {
-          width: 100% !important;
-          height: calc(100vh - 78px) !important;
+          width: 90% !important;
+          // height: calc(100vh - 78px) !important;
           padding: calc($space * 0) calc($space * 1.6);
         }
 
@@ -171,6 +223,7 @@
               margin-bottom: calc($space / 2.5);
 
               @include res(tab-lg) {
+                margin-bottom: calc($space / 4) !important;
                 font-size: $fontsize-large7;
               }
             }
@@ -210,61 +263,42 @@
           }
         }
 
-        &-bottom {
-          @include flexCenter(column);
-          width: 100%;
+        // &-bottom {
+        //   @include flexCenter(column);
+        //   width: 100%;
 
-          @include res(tab-lg) {
-            height: 100px;
-            flex-shrink: 0;
-          }
+        //   @include res(tab-lg) {
+        //     height: 100%;
+        //     flex-shrink: 0;
+        //   }
 
-          a {
-            font-style: normal;
-            font-weight: 500;
-            font-size: $fontsize-default;
-            line-height: 130%;
-            color: var(--primary-blue);
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            width: 100%;
-            border: 1px solid var(--primary-blue);
-            border-radius: $radius;
-            padding: calc($space / 1.25);
-            margin-bottom: calc($space * 2);
+        //   a {
+        //     font-style: normal;
+        //     font-weight: 500;
+        //     font-size: $fontsize-default;
+        //     line-height: 130%;
+        //     color: var(--primary-blue);
+        //     text-decoration: none;
+        //     display: block;
+        //     text-align: center;
+        //     width: 100%;
+        //     border: 1px solid var(--primary-blue);
+        //     border-radius: $radius;
+        //     padding: calc($space / 1.25);
+        //     margin-bottom: calc($space * 2);
 
-            &:hover {
-              background-color: var(--primary-blue);
-              color: var(--white);
-            }
+        //     &:hover {
+        //       background-color: var(--primary-blue);
+        //       color: var(--white);
+        //     }
 
-            button {
-              background-color: $transparent;
-              border: none;
-              outline: none;
-            }
-          }
-
-          ._linkpara {
-            font-style: normal;
-            font-weight: 400;
-            font-size: $fontsize-default;
-            line-height: 130%;
-            color: var(--text-primary);
-
-            .link {
-              font-style: normal;
-              font-weight: 500;
-              font-size: $fontsize-default;
-              line-height: 130%;
-              color: var(--primary-blue);
-              background-color: $transparent;
-              border: none;
-              outline: none;
-            }
-          }
-        }
+        //     button {
+        //       background-color: $transparent;
+        //       border: none;
+        //       outline: none;
+        //     }
+        //   }
+        // }
 
         .loading {
           @include flexCenter(row);
@@ -295,8 +329,6 @@
           @include flexColumnStartCenter();
           @include flexCenter(column);
           text-align: left;
-          // min-width: 25rem;
-          // max-width: 25rem;
           width: 338px;
           height: 100%;
           font-family: "Roboto" !important;
@@ -313,9 +345,11 @@
 
           &-top {
             width: 100%;
+            @include flexCenter(column);
+            padding: calc($space / 1.25);
+            gap: 1rem !important;
             @include res(tab-lg) {
-              // height: 100%;
-              flex-shrink: 0;
+              height:fit-content !important;
             }
           }
 
@@ -324,33 +358,103 @@
             width: 100%;
 
             @include res(tab-lg) {
-              height: 100px;
-              flex-shrink: 0;
-              // position: absolute;
-              // bottom: 0px;
-              // left: 0px;
-            }
-          }
-
-          &.verify {
-            .form-top {
-              flex: 1;
-            }
-            .form-bottom {
+              @include flexCenter(column);
               height: fit-content;
-              padding-bottom: calc($space * 1.6);
+              flex-shrink: 0;
             }
           }
 
-          #invalidemail {
-            border: 1px solid $red-light-100 !important;
-          }
-
-          #invalidMsg {
+          .singupwith {
+            height: 32px;
+            @include flexRowAroundCenter();
+            border: 1px solid $grey-1 !important;
+            outline: none !important;
+            font-size: medium;
+            padding: calc($space / 1.25) 0;
+            margin: calc($space / 2.5) calc($space * 0);
             width: 100%;
-            color: $red-light-100 !important;
+            color: $text-light-muted !important;
+            caret-color: black;
+            color: black !important;
+            font-size: $fontsize-large1;
+            font-weight: 500;
+            font-family: "Poppins", sans-serif;
+            border-radius: 4px;
+            .facebook-icon {
+              color: #3e71b6;
+            }
+            @include res(tab-lg) {
+              width: 98%;
+              margin-bottom: calc($space * 2);
+            }
           }
 
+          .or {
+            display: flex;
+            width: 100%;
+            @include flexRowBetweenCenter();
+            gap: 1rem;
+            font-family: "Poppins", sans-serif;
+            .horizontal-line {
+              width: 100%;
+              border-top: 1px solid $grey-1 !important; /* Adjust the color and thickness as needed */
+              margin: 10px 0; /* Adjust the margin as needed */
+            }
+          }
+
+          input {
+            border: 1px solid $grey-1 !important;
+            outline: none !important;
+            padding: calc($space / 1.25) calc($space);
+            margin: calc($space / 2.5) calc($space * 0);
+            border-radius: 4px;
+            width: 95% !important;
+            height: 32px;
+            color: $text-dark-primary !important;
+
+            @include res(tab-lg) {
+              margin-bottom: calc($space * 2);
+            }
+          }
+
+          input:focus {
+            border: 1px solid $blue-light-200 !important;
+            outline: none !important;
+            padding: calc($space / 1.25);
+            margin: calc($space / 2.5) calc($space * 0);
+            border-radius: 4px;
+            width: 100%;
+            height: 32px;
+            color: $text-dark-primary !important;
+
+            @include res(tab-lg) {
+              margin-bottom: calc($space * 2);
+            }
+
+            &.error-input {
+              border: 1px solid var(--primary-red) !important;
+
+              & + p {
+                font-weight: 400;
+                font-size: $fontsize-default;
+                line-height: 130%;
+                color: var(--primary-red);
+                margin-bottom: calc($space * 1);
+              }
+            }
+          }
+
+          .ghostbutton {
+            width: 100%;
+            background-color: $primary-orange !important;
+            color: $secondary-light !important;
+            cursor: pointer;
+            padding: calc($space * 1.5);
+            // margin: calc($space / 2.5) calc($space * 0);
+            border-radius: 4px;
+            border: none !important;
+          }
+          
           .header {
             margin-bottom: calc($space * 0.4);
             font-style: normal;
@@ -359,7 +463,7 @@
             width: 100%;
 
             @include res(tab-lg) {
-              margin-bottom: calc($space * 2.8);
+              margin-bottom: calc($space);
             }
 
             h4 {
@@ -391,192 +495,113 @@
             }
           }
 
-          .fullname {
-            width: 100%;
-            gap: 1rem;
-            @include flexRowBetweenCenter();
-            text-align: left;
-
-            @include res(tab-lg) {
-              @include flexColumnStart();
-              gap: 0px;
-            }
-
-            .firstname,
-            .lastname {
-              @include flexCenter(column);
-              width: 90%;
-
-              @include res(tab-lg) {
-                width: 100%;
-              }
-            }
-          }
-
-          label {
-            margin-top: calc($space * 1.6);
-            width: 100%;
-            color: $text-light-muted;
-            font-weight: 500;
-            font-size: $fontsize-small2;
-            line-height: 120%;
-          }
-
-          input {
-            border: 1px solid $text-light-muted !important;
-            outline: none !important;
-            padding: calc($space / 1.25) calc($space / 1.66);
-            margin: calc($space / 2.5) calc($space * 0);
-            width: 100%;
-            color: $text-light-muted !important;
-            caret-color: black;
-            border-radius: 4px;
-
-            &.error-input {
-              border: 1px solid var(--primary-red) !important;
-
-              & + p {
-                font-weight: 400;
-                font-size: $fontsize-default;
-                line-height: 130%;
-                color: var(--primary-red);
-                margin-bottom: calc($space * 1);
-                @include res(tab-lg) {
-                  margin-top: calc($space * -1.6);
-                }
-              }
-            }
-          }
-
-          input:focus {
-            padding: calc($space / 1.25) calc($space / 1.66);
-            margin: calc($space / 2.5) calc($space * 0);
-            width: 100%;
-            color: $text-dark-primary !important;
-            border: 1px solid $blue-light-200 !important;
-            border-radius: 4px;
-
-            &.error-input {
-              border: 1px solid var(--primary-red) !important;
-
-              & + p {
-                font-weight: 400;
-                font-size: $fontsize-default;
-                line-height: 130%;
-                color: var(--primary-red);
-                margin-bottom: calc($space * 1);
-              }
-            }
-          }
-
-          .forgot {
-            margin: calc($space / 1.25) calc($space * 0) calc($space * 0);
-            align-self: flex-end;
-            background-color: transparent;
-            cursor: pointer;
-            color: $blue-light-200 !important;
-            color: $text-dark-primary;
-          }
-
-          .ghostbutton {
-            // width: 100%;
-            // color: $secondary-light !important;
-            // cursor: pointer;
-            // border-radius: 4px;
-            // font-size: $fontsize-default;
-            // font-weight: 500;
-            // padding: calc($space * 1.2) calc($space * 4.5);
-            // margin-top: calc($space * 3.4);
+          .signup_para {
+            font-size: $fontsize-default !important;
+            font-family: "Poppins", sans-serif !important;
+            line-height: 130%;
+            color: var(--text-primary);
+            text-align: center;
+            @include flexCenter(column);
           }
 
           ._linkpara {
-            margin-top: calc($space * 2.8);
+            margin-top: calc($space * 2);
+            font-weight: 600 !important;
             font-weight: 400;
             font-size: $fontsize-default;
+            font-family: "Poppins", sans-serif !important;
             line-height: 130%;
             color: $text-dark-primary !important;
 
+            @include res(tab-lg) {
+              margin-top: 0;
+              @include flexCenter(column);
+            }
             .link {
               font-weight: 500;
               background-color: transparent;
               border-color: $secondary-light;
               cursor: pointer;
-              color: $blue-light-200;
+              color: $primary-orange !important;
               transition: transform 80ms ease-in;
-
-              input {
-                color: $text-dark-primary;
-                width: 100%;
+              @include res(tab-lg) {
+                display: flex;
               }
             }
           }
 
-          label {
-            margin-top: calc($space * 1.6);
-            width: 100%;
-            color: $text-light-muted;
-            font-weight: 500;
-            font-size: $fontsize-small2;
-            line-height: 120%;
+          //  Extra
+          // &.verify {
+          //   .form-top {
+          //     flex: 1;
+          //   }
+          //   .form-bottom {
+          //     height: fit-content;
+          //     padding-bottom: calc($space * 1.6);
+          //   }
+          // }
 
-            @include res(tab-lg) {
-              margin-top: calc($space * 0);
-            }
-          }
+          // #invalidemail {
+          //   border: 1px solid $red-light-100 !important;
+          // }
 
-          input {
-            border: 1px solid $grey-1 !important;
-            outline: none !important;
-            padding: calc($space / 1.25);
-            margin: calc($space / 2.5) calc($space * 0);
-            border-radius: 4px;
-            width: 100%;
-            height: 32px;
-            color: $text-dark-primary !important;
+          // #invalidMsg {
+          //   width: 100%;
+          //   color: $red-light-100 !important;
+          // }
 
-            @include res(tab-lg) {
-              margin-bottom: calc($space * 2);
-            }
+          // .fullname {
+          //   width: 100%;
+          //   gap: 1rem;
+          //   @include flexRowBetweenCenter();
+          //   text-align: left;
 
-            &.error-input {
-              border: 1px solid var(--primary-red) !important;
+          //   @include res(tab-lg) {
+          //     @include flexColumnStart();
+          //     gap: 0px;
+          //   }
 
-              & + p {
-                font-weight: 400;
-                font-size: $fontsize-default;
-                line-height: 130%;
-                color: var(--primary-red);
-                margin-bottom: calc($space * 1);
-              }
-            }
-          }
+          //   .firstname,
+          //   .lastname {
+          //     @include flexCenter(column);
+          //     width: 90%;
 
-          input:focus {
-            border: 1px solid $blue-light-200 !important;
-            outline: none !important;
-            padding: calc($space / 1.25);
-            margin: calc($space / 2.5) calc($space * 0);
-            border-radius: 4px;
-            width: 100%;
-            height: 32px;
-            color: $text-dark-primary !important;
+          //     @include res(tab-lg) {
+          //       width: 100%;
+          //     }
+          //   }
+          // }
 
-            @include res(tab-lg) {
-              margin-bottom: calc($space * 2);
-            }
+          // label {
+          //   margin-top: calc($space * 1.6);
+          //   width: 100%;
+          //   color: $text-light-muted;
+          //   font-weight: 500;
+          //   font-size: $fontsize-small2;
+          //   line-height: 120%;
+          // }
 
-            &.error-input {
-              border: 1px solid var(--primary-red) !important;
+          // .forgot {
+          //   margin: calc($space / 1.25) calc($space * 0) calc($space * 0);
+          //   align-self: flex-end;
+          //   background-color: transparent;
+          //   cursor: pointer;
+          //   color: $blue-light-200 !important;
+          //   color: $text-dark-primary;
+          // }
 
-              & + p {
-                font-weight: 400;
-                font-size: $fontsize-default;
-                line-height: 130%;
-                color: var(--primary-red);
-                margin-bottom: calc($space * 1);
-              }
-            }
-          }
+          // label {
+          //   margin-top: calc($space * 1.6);
+          //   width: 100%;
+          //   color: $text-light-muted;
+          //   font-weight: 500;
+          //   font-size: $fontsize-small2;
+          //   line-height: 120%;
+
+          //   @include res(tab-lg) {
+          //     margin-top: calc($space * 0);
+          //   }
+          // }
 
           /* Forgot Link */
           .forgot {
@@ -611,35 +636,38 @@
           // }
 
           /* GetOTP Submit Button */
-          .ghostbuttonOTP {
-            width: 100%;
-            height: 32px;
-            text-align: center;
-            color: $secondary-light !important;
-            cursor: pointer;
-            font-size: $fontsize-default;
-            font-weight: 500;
-            margin-top: calc($space * 2);
-            border-radius: 4px;
-          }
+          // .ghostbuttonOTP {
+          //   width: 100%;
+          //   height: 32px;
+          //   text-align: center;
+          //   color: $secondary-light !important;
+          //   cursor: pointer;
+          //   font-size: $fontsize-default;
+          //   font-weight: 500;
+          //   margin-top: calc($space * 2);
+          //   border-radius: 4px;
+          //   @include res(tab-lg) {
+          //     margin-top: calc($space * 3);
+          //   }
+          // }
 
           /* Bottom Login and Sign up Links */
-          ._linkpara {
-            margin-top: calc($space * 2);
-            font-weight: 400;
-            font-size: $fontsize-default;
-            line-height: 130%;
-            color: $text-dark-primary !important;
+          // ._linkpara {
+          //   margin-top: calc($space * 2);
+          //   font-weight: 400;
+          //   font-size: $fontsize-default;
+          //   line-height: 130%;
+          //   color: $text-dark-primary !important;
 
-            .link {
-              font-weight: 500;
-              background-color: transparent;
-              border-color: $secondary-light;
-              cursor: pointer;
-              color: $blue-light-200 !important;
-              transition: transform 80ms ease-in;
-            }
-          }
+          //   .link {
+          //     font-weight: 500;
+          //     background-color: transparent;
+          //     border-color: $secondary-light;
+          //     cursor: pointer;
+          //     color: $blue-light-200 !important;
+          //     transition: transform 80ms ease-in;
+          //   }
+          // }
 
           /* Edit number */
           .edit_number {
@@ -802,31 +830,31 @@
             }
           }
 
-          .resetlink {
-            .header {
-              p {
-                font-weight: 400;
-                font-size: $fontsize-large1;
-                line-height: 140%;
-                color: $text-dark-secondary;
-                margin: calc($space * 0) calc($space * 0) calc($space * 2);
+          // .resetlink {
+          //   .header {
+          //     p {
+          //       font-weight: 400;
+          //       font-size: $fontsize-large1;
+          //       line-height: 140%;
+          //       color: $text-dark-secondary;
+          //       margin: calc($space * 0) calc($space * 0) calc($space * 2);
 
-                b {
-                  color: $text-dark-primary;
-                }
-              }
-            }
+          //       b {
+          //         color: $text-dark-primary;
+          //       }
+          //     }
+          //   }
 
-            .resendmaillinks {
-              width: 100%;
-              @include flexRowBetweenStart();
-              background-color: transparent;
-              cursor: pointer;
-              font-weight: 500;
-              line-height: 130%;
-              color: $blue-light-200 !important;
-            }
-          }
+          //   .resendmaillinks {
+          //     width: 100%;
+          //     @include flexRowBetweenStart();
+          //     background-color: transparent;
+          //     cursor: pointer;
+          //     font-weight: 500;
+          //     line-height: 130%;
+          //     color: $blue-light-200 !important;
+          //   }
+          // }
 
           .contactusbutton {
             color: $blue-light-200;
