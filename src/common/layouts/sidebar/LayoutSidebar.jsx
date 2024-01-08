@@ -18,6 +18,9 @@ const LayoutSidebar = () => {
           <Link to="/profile">Profile</Link>
         </li>
         <li>
+          <Link to="/extras">Extras</Link>
+        </li>
+        <li>
           <Link to="/signup">Signup</Link>
         </li>
       </ul>

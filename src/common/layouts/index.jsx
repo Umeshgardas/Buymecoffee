@@ -5,6 +5,7 @@ import LayoutSidebar from "../layouts/sidebar/LayoutSidebar";
 import Signup from "../../pages/signup";
 import Profile from "../../pages/profile";
 import Dashboard from "../../pages/dashboard";
+import Extras from "../../pages/extras";
 
 const Layout = ({ children }) => {
   const parentRef = useRef();
@@ -27,13 +28,16 @@ const Layout = ({ children }) => {
         <Header />
         <div className="mainLayout">
           <LayoutSidebar />
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
           <div className="mainLayout-inner" ref={parentRef}>
-            <div className="mainLayout-inner_body">{children}</div>
+            <div className="mainLayout-inner_body">
+              {children}
+              <Routes>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/extras" element={<Extras />} />
+                <Route path="/signup" element={<Signup />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </main>

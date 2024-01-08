@@ -1,9 +1,4 @@
-<<<<<<< Updated upstream
-import Signup from "./pages/signup";
-import Extras from "./common/components/extras/Extras";
-=======
 import { Route, Routes, Link } from "react-router-dom";
->>>>>>> Stashed changes
 import "pure-react-carousel/dist/react-carousel.es.css";
 import Profile from "./pages/profile";
 import Signup from "./pages/signup";

@@ -1,0 +1,110 @@
+.Extras_container {
+  background: #fff;
+  font-size: larger;
+  margin: 2em;
+  .extras_routes {
+    margin: 20px 0 20px 20px;
+  }
+}
+
+.My_extra,
+.supporters {
+  margin: 2px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  opacity: 0.5;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.supporters {
+  margin: 3em;
+}
+
+.extras_form_container {
+  height: 80vh;
+  padding: 25px;
+  border: 1px solid $primary-bd-gray;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.extras_form_containers-1 {
+  display: flex;
+  gap: 2rem;
+}
+
+.extras_form_containers-2,
+.extras_form_containers-3 {
+  display: flex;
+  height: 5em;
+  margin-top: 20px;
+}
+
+.offering {
+  width: 70%;
+  height: 4em;
+}
+
+.price {
+  height: 4em;
+  width: 30%;
+}
+
+.offering-input-container,
+.price-input-container {
+  width: 100%;
+  height: 60%;
+  border-radius: 5px;
+  background-color: $primary-bd-gray;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 2px;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1em;
+  opacity: 0.5;
+  font-weight: 200;
+  background: transparent;
+  background-color: $primary-bd-gray;
+  border: none;
+  font-size: 15px;
+}
+.price-input-container input {
+  padding-left: 2px;
+  margin-left: 3px;
+}
+
+.extras_form_containers-2,
+.extras_form_containers-3 {
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.extras_form_containers-4 {
+  margin-top: 30px;
+}
+
+.extras_form_containers-4 p {
+  margin-top: 5px;
+  opacity: 0.3;
+}
+
+.extras_form_containers-2 input,
+.extras_form_containers-3 input {
+  width: 70%;
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 4em;
+}
+
+button {
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 25px;
+  width: 60px;
+}
