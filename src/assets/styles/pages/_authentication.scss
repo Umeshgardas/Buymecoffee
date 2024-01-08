@@ -426,7 +426,7 @@
             width: 100%;
             height: 32px;
             color: $text-dark-primary !important;
-
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             @include res(tab-lg) {
               margin-bottom: calc($space * 2);
             }

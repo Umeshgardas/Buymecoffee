@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SignupForm from "../common/components/authentication/signup/SignupForm";
-import AuthenticationWrapper from "../common/components/authentication/wrapper/AuthenticationWrapper";
+import SignupForm from "../../common/components/authentication/signup/SignupForm";
+import AuthenticationWrapper from "../../common/components/authentication/wrapper/AuthenticationWrapper";
 
 const Signup = () => {
   /* Sign-Up States */
