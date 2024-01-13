@@ -15,9 +15,14 @@
     &-left {
       width: 55%;
       padding: calc($space);
-      border: 1px solid red;
+      // border: 1px solid red;
       @include flexColumnStart();
       gap: 1rem;
+      .header {
+        h2 {
+          color: $priamry-black;
+        }
+      }
       .position {
         display: flex;
         flex-direction: column;
@@ -46,6 +51,9 @@
         }
       }
       .input-set {
+        label {
+          color: $priamry-black;
+        }
         .input-row {
           width: 80%;
         }
@@ -79,16 +87,108 @@
       }
     }
     &-right {
-      padding: calc($space);
-      border: 1px solid red;
-      @include flexColumnStart();
       width: 40%;
-      height: 80%;
-      gap: 1rem;
-      .coffee-count {
-        padding: calc($space * 2);
-        border: 1px solid $senary-dark;
-        width: 100%;
+      height: fit-content;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      // padding: calc($space);
+      // border: 1px solid red;
+      &-inner {
+        padding: calc($space);
+        @include flexColumnStart();
+        width: fit-content;
+        height: fit-content;
+        gap: 1rem;
+        .header {
+          h4 {
+            color: $priamry-black;
+            span {
+              color: #d8d6df;
+            }
+          }
+        }
+
+        .input-set {
+          .input-row {
+            width: 100%;
+          }
+        }
+        .rs-btn-primary {
+          height: calc($space * 4);
+          width: 100%;
+          font-family: "Poppins", "sans-serif";
+          background-color: $primary-orange !important;
+          border-radius: 0px !important;
+          color: $secondary-light !important;
+          border: none !important;
+          -webkit-border-radius: 0px !important;
+          -moz-border-radius: 0px !important;
+          -ms-border-radius: 0px !important;
+          -o-border-radius: 0px !important;
+          span {
+            color: $senary-light;
+          }
+        }
+
+        .privatemsg {
+          // border: 1px solid red;
+          @include flexCenter(row);
+          gap: $space;
+          color: $priamry-black;
+          font-size: $fontsize-default;
+          font-weight: 600;
+          input {
+            height: $space;
+            width: $space;
+          }
+          span.que {
+            @include flexCenter(row);
+            height: $space + 5;
+            width: $space + 5;
+            color: $primary-orange;
+            border: 1px solid $text-dark-muted;
+            border-radius: $space;
+            -webkit-border-radius: $space;
+            -moz-border-radius: $space;
+            -ms-border-radius: $space;
+            -o-border-radius: $space;
+          }
+        }
+
+        .recent_coffee {
+          // border: 1px solid red;
+          &-avatar {
+            color: $priamry-black;
+            font-size: $fontsize-default;
+            font-weight: 600;
+            gap: $space;
+            @include flexCenter(row);
+            // border: 1px solid red;
+            span.bought {
+              color: $text-dark-muted;
+              font-size: $fontsize-default;
+              font-weight: 600;
+            }
+            .rs-avatar {
+              height: 40px;
+              width: 40px;
+              img {
+                object-fit: contain;
+                height: 40px;
+                width: 40px;
+              }
+            }
+          }
+        }
+        .coffee-count {
+          padding: calc($space * 2);
+          border: 1px solid $senary-dark;
+          width: fit-content;
+        }
+      }
+      .secured {
+        border-top: 1px solid $secondary-light;
+        height: $space * 4;
+        @include flexCenter(row);
       }
     }
   }

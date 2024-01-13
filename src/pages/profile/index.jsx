@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SiBuymeacoffee } from "react-icons/si";
 import InputSet from "../../common/components/inputSet/InputSet";
-import { Button, Dropdown, Modal } from "rsuite";
+import { Avatar, Button, Dropdown, Modal } from "rsuite";
 import { FaCheck, FaCheckCircle } from "react-icons/fa";
 import ShareModal from "../../common/components/modals/ShareModal";
 const Profile = () => {
@@ -44,7 +44,7 @@ const Profile = () => {
         <div className="widget_inner">
           <div className="widget_inner-left">
             <div className="header">
-              <h1>Widget</h1>
+              <h2>Widget</h2>
               <p>Allow your fans to support directly from your website</p>
             </div>
             <InputSet label={"Description"} placeholder={"description"} />
@@ -141,27 +141,55 @@ const Profile = () => {
           </div>
 
           <div className="widget_inner-right">
-            <div className="header">
-              <h2>
-                Buy <span>Olivia Ysabelle</span> a coffee
-              </h2>
-              <p>
-                Thank you, and feel free to leave a comment with your support
-              </p>
+            <div className="widget_inner-right-inner">
+              <div className="header">
+                <h4>
+                  Buy <span>Olivia Ysabelle</span> a coffee
+                </h4>
+                <p>
+                  Thank you, and feel free to leave a comment with your support
+                </p>
+              </div>
+              <div className="coffee-count">
+                <SiBuymeacoffee /> x
+              </div>
+              <InputSet
+                name={"email"}
+                placeholder={"Your email"}
+                inputClassName={"widget_input"}
+              />
+              <InputSet
+                name={"email"}
+                placeholder={"Your email"}
+                inputClassName={"widget_input"}
+              />
+              <div className="privatemsg">
+                <input type="checkbox" />
+                <span>Private message</span>
+                <span className="que">?</span>
+              </div>
+              <Button appearance="primary" className="primary_button">
+                Support <span>($4)</span>
+              </Button>
+              <div className="recent_coffee">
+                <p>Recent coffees</p>
+                <div className="recent_coffee-avatar">
+                  <Avatar
+                    size="lg"
+                    circle
+                    src="https://avatars.githubusercontent.com/u/12592949"
+                    alt="@SevenOutman"
+                  />
+                  <span>
+                    Jake Horman <span className="bought">bought</span> 1 coffee{" "}
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="coffee-count">
-              <SiBuymeacoffee /> x
+            <div className="secured">
+              <SiBuymeacoffee />
+              Secured by Buy Me A Coffee
             </div>
-            <InputSet
-              name={"email"}
-              placeholder={"Your email"}
-              inputClassName={"widget_input"}
-            />
-            <InputSet
-              name={"email"}
-              placeholder={"Your email"}
-              inputClassName={"widget_input"}
-            />
           </div>
         </div>
       </div>

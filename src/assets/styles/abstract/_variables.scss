@@ -1,11 +1,11 @@
 // authentication
-$primary-orange:#FE813F;
+$primary-orange: #fe813f;
 $secondary-light: #ffffff;
-$primary-bg-light: #E0E5E9;
-$primary-bd-gray: #E0E5E9;
+$primary-bg-light: #e0e5e9;
+$primary-bd-gray: #e0e5e9;
 $priamry-black: #000000;
 $senary-dark: #747474;
-
+$light-border: #fafafa;
 
 // main colors
 $primary-dark: #010514;
@@ -124,12 +124,12 @@ $highChart-dark-text: #ffffff;
 
 $ag-light-bg: #ffffff;
 $ag-light-bg-even: #ffffff;
-$ag-light-bg-odd: #F4F4F5;
-$ag-light-bg-expanded: #ECECEE;
+$ag-light-bg-odd: #f4f4f5;
+$ag-light-bg-expanded: #ececee;
 $ag-dark-bg: #131725;
 $ag-dark-bg-even: #131725;
-$ag-dark-bg-odd: #1A1E2B;
-$ag-dark-bg-expanded: #272A37;
+$ag-dark-bg-odd: #1a1e2b;
+$ag-dark-bg-expanded: #272a37;
 
 $ag-light-border: #f2f2f3;
 $ag-dark-border: #1a1e2b;
@@ -223,7 +223,8 @@ $profilebg: #112864;
 
 // shadow
 $shadow-general: 0px 8px 16px rgba(96, 97, 112, 0.05);
-$shadow-sm: 0px 8px 16px 0px rgba(96, 97, 112, 0.16), 0px 2px 4px 0px rgba(40, 41, 61, 0.04);
+$shadow-sm: 0px 8px 16px 0px rgba(96, 97, 112, 0.16),
+  0px 2px 4px 0px rgba(40, 41, 61, 0.04);
 
 // font size
 $fontsize-large12: 84px; //5.25rem; // 55px
@@ -355,8 +356,16 @@ $passwod-modal-text-dark: #8c8e95;
 
 $calendar-hover: #cce9ff80;
 
-$overlay-gradient-light: linear-gradient(0deg, #d9d9d9 0%, rgba(217, 217, 217, 0) 100%);
-$overlay-gradient-dark: linear-gradient(0deg, #131725 0%, rgba(12, 20, 60, 0) 100%);
+$overlay-gradient-light: linear-gradient(
+  0deg,
+  #d9d9d9 0%,
+  rgba(217, 217, 217, 0) 100%
+);
+$overlay-gradient-dark: linear-gradient(
+  0deg,
+  #131725 0%,
+  rgba(12, 20, 60, 0) 100%
+);
 
 $daily-rollover-footer-light-bg-color: #f7f9ff;
 $daily-rollover-footer-dark-bg-color: #050e2b;
