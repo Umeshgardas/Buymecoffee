@@ -9,7 +9,7 @@ import { FaSpotify } from "react-icons/fa";
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <div>
+      <div className="header">
         <div className="dashboard_top">
           <div className="avatar_icon">
             <div className="avatar_div">
@@ -38,7 +38,9 @@ const Dashboard = () => {
           <a>Post</a>
           <a>Extras</a>
         </div>
-        <div className="feed">
+      </div>
+      <div className="main">
+        <div className="left">
           <div className="first_feed">
             <img src="https://www.shutterstock.com/image-vector/vector-illustration-blue-sky-white-600nw-2029949744.jpg" />
             <p>
@@ -51,47 +53,40 @@ const Dashboard = () => {
               <FaYoutube />
             </span>
           </div>
+          <div className="third_feed">
+            <div className="supporters">
+              <h4>
+                <b>RECENT SUPPORTERS</b>
+              </h4>
+            </div>
+            <div className="third_sub_feed">
+              <Avatar
+                size="lg"
+                circle
+                src="https://avatars.githubusercontent.com/u/12592949"
+                alt="@SevenOutman"
+              />
+              <p>
+                Hey, Julie your videos are such a big help for an up and coming
+                cabinet <br /> maker/ kitchen fitter myself. Thnaks for doing
+                What you.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="right">
           <div className="second_feed">
-            <h3>Buy Julie Peter a Coffee</h3>
+            <h4>Buy Julie Peter a Coffee</h4>
             <br />
             <div className="no_of_coffee">
               <SiCoffeescript />
               <span>1</span>
               <span>2</span>
               <span>3</span>
-              <input placeholder="Say something noce...[optional]" />
-              <div>
-                <input
-                  type="checkbox"
-                  id="vehicle1"
-                  name="vehicle1"
-                  value="Bike"
-                />
-                <label for="vehicle1">Make this massage private</label>
-              </div>
+             
               <br></br>
               <a>Support $3</a>
             </div>
-          </div>
-        </div>
-        <div className="third_feed">
-          <div className="supporters">
-            <h4>
-              <b>RECENT SUPPORTERS</b>
-            </h4>
-          </div>
-          <div className="third_sub_feed">
-            <Avatar
-              size="lg"
-              circle
-              src="https://avatars.githubusercontent.com/u/12592949"
-              alt="@SevenOutman"
-            />
-            <p>
-              Hey, Julie your videos are such a big help for an up and coming
-              cabinet <br /> maker/ kitchen fitter myself. Thnaks for doing What
-              you.
-            </p>
           </div>
         </div>
       </div>

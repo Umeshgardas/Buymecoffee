@@ -5,14 +5,16 @@ import LayoutSidebar from "../layouts/sidebar/LayoutSidebar";
 import Signup from "../../pages/signup";
 import Profile from "../../pages/profile";
 import Dashboard from "../../pages/dashboard";
-import Extras from "../../pages/extras";
+import Extras from "../../pages/extras/extras";
+import Supporters from "../../pages/extras/supporters";
+import MyExtras from "../../pages/extras/myextras";
 
 const Layout = ({ children }) => {
   const parentRef = useRef();
   const navigate = useNavigate();
-  useEffect(() => {
-    navigate("/");
-  }, []);
+  // useEffect(() => {
+  //   navigate("/");
+  // }, []);
 
   return (
     <>
@@ -34,7 +36,10 @@ const Layout = ({ children }) => {
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/profile" element={<Profile />} />
-                <Route path="/extras" element={<Extras />} />
+                <Route path="/extras" element={<Extras />}>
+                  <Route path="/extras/myextras" element={<MyExtras />}></Route>
+                  <Route path="/extras/supporters" element={<Supporters />}></Route>
+                </Route>
                 <Route path="/signup" element={<Signup />} />
               </Routes>
             </div>

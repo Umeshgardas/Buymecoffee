@@ -349,7 +349,7 @@
             padding: calc($space / 1.25);
             gap: 1rem !important;
             @include res(tab-lg) {
-              height:fit-content !important;
+              height: fit-content !important;
             }
           }
 
@@ -449,13 +449,13 @@
             background-color: $primary-orange !important;
             color: $secondary-light !important;
             cursor: pointer;
+            padding: calc($space * 1.5);
             @include flexCenter(row);
-            padding: calc($space * 1.5) 0;
             // margin: calc($space / 2.5) calc($space * 0);
             border-radius: 4px;
             border: none !important;
           }
-          
+
           .header {
             margin-bottom: calc($space * 0.4);
             font-style: normal;

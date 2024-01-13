@@ -1,0 +1,37 @@
+// Sidebar.scss
+
+.sidebar {
+  background-color: #fff; /* White background */
+  color: #000; /* Black text color */
+  width: 200px; /* Sidebar width */
+  padding: 20px; /* Padding for the links */
+  @include flexColumnStartCenter();
+  height: 100%;
+
+  ul {
+    list-style-type: none; /* Remove list styling */
+    padding: 0;
+    li {
+      padding: $space;
+      margin-bottom: 10px; /* Adjust spacing between sidebar items */
+      font-size: $fontsize-large1;
+      font-family: "Poppins", "sans-serif";
+      a {
+        text-decoration: none;
+        color: #000; /* Link color */
+        display: flex; /* Align icon and text horizontally */
+        align-items: center; /* Center items vertically */
+        font-weight: 500 !important;
+
+        svg {
+          height: $space * 2;
+          width: $space * 2;
+          margin-right: 10px; /* Adjust spacing between icon and text */
+        }
+      }
+      a:hover {
+        color: $primary-orange;
+      }
+    }
+  }
+}

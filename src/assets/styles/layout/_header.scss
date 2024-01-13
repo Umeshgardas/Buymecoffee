@@ -1,0 +1,31 @@
+// Header.scss
+
+header {
+  @include flexRowBetweenCenter();
+  padding: $space * 2 $space * 5;
+  background-color: $secondary-light; /* Orange background color */
+  .logo {
+    padding: calc($space/3);
+    // border: 1px solid red;
+    svg {
+      width: 30px; /* Adjust the logo width */
+      height: 30px; /* Adjust the logo height */
+    }
+  }
+}
+
+.myPageButton {
+  background-color: #fff; /* White background */
+  color: #ff8c00; /* Orange text color */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.myPageButton:hover {
+  background-color: #ffcc00; /* Lighter orange color on hover */
+}
+
+.user_avatar {
+  margin-left: 10px; /* Adjust the margin between the button and avatar */
+}

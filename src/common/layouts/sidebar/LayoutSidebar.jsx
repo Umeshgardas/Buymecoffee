@@ -1,24 +1,31 @@
-import { useState, Fragment } from "react";
-import { Dropdown, Popover, Whisper } from "rsuite";
-
-// components
+import React from "react";
 import { Link } from "react-router-dom";
+import { FaHome, FaUser, FaStar, FaSignInAlt } from "react-icons/fa";
+import { MdOutlineInsertChart } from "react-icons/md";
+import { RiShoppingBasketFill } from "react-icons/ri";
+import { IoMdHeartEmpty } from "react-icons/io";
 
-// icons
-
-const LayoutSidebar = () => {
-
+function Sidebar() {
   return (
-    <nav>
+    <nav className="sidebar">
       <ul>
         <li>
-          <Link to="/">Dashboard</Link>
+          <Link to="/">
+            <MdOutlineInsertChart />
+            Dashboard
+          </Link>
         </li>
         <li>
-          <Link to="/profile">Profile</Link>
+          <Link to="/profile">
+            <IoMdHeartEmpty />
+            Profile
+          </Link>
         </li>
         <li>
-          <Link to="/extras">Extras</Link>
+          <Link to="/extras/myextras">
+            <RiShoppingBasketFill />
+            Extras
+          </Link>
         </li>
         <li>
           <Link to="/signup">Signup</Link>
@@ -26,6 +33,6 @@ const LayoutSidebar = () => {
       </ul>
     </nav>
   );
-};
+}
 
-export default LayoutSidebar;
+export default Sidebar;

@@ -1,25 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
 
-
 // Abstract
 @import "./abstract/variables";
 @import "./abstract/mixins";
 @import "./abstract/theme";
 
-
 // Pages
 @import "./pages/authentication";
 @import "./pages/extras";
 @import "./pages/dashboard";
+@import "./pages/widget";
 
 //base
 // @import "./base/typography";
 // @import "./base/utility";
 @import "./base/global";
+@import "./base/rsuites";
 
 //Layout
 @import "./layout/layout";
+@import "./layout/sidebar";
+@import "./layout/header";
 
 // Components
 @import "./components/inputPassword";
 @import "./components/inputSet";
+@import "./components/profile";
+@import "./components/generalModal";
+@import "./components/shareModal";

@@ -1,0 +1,95 @@
+.widget {
+  display: flex;
+  height: 90%;
+  width: 70%;
+  // margin-top: 2%;
+  @include flexCenter(row);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  &_inner {
+    height: 100%;
+    width: 100%;
+    padding: $space * 2;
+    gap: $space * 2;
+    @include flexRowBetweenCenter();
+    &-left {
+      width: 55%;
+      padding: calc($space);
+      border: 1px solid red;
+      @include flexColumnStart();
+      gap: 1rem;
+      .position {
+        display: flex;
+        flex-direction: column;
+        gap: calc($space/2);
+        span {
+          margin-bottom: $space;
+          color: $text-dark-muted;
+          font-size: $fontsize-small1;
+        }
+        label {
+          font-size: $fontsize-default;
+          font-weight: 600 !important;
+          line-height: 120%;
+        }
+        &_inner {
+          @include flexCenter(row);
+          // gap: calc($space);
+          .input-row {
+            @include flexCenter(row);
+            width: 50% !important;
+            .rs-input-group {
+              @include flexCenter(row);
+              gap: calc($space/2);
+            }
+          }
+        }
+      }
+      .input-set {
+        .input-row {
+          width: 80%;
+        }
+        .colors {
+          border: 1px solid $senary-dark !important;
+        }
+      }
+      .button {
+        height: 100%;
+        width: 100%;
+        @include flexRowStart();
+        gap: $space;
+        .rs-btn-primary {
+          height: calc($space * 4);
+          width: calc($space * 10);
+          font-family: "Poppins", "sans-serif";
+          background-color: $primary-orange !important;
+          border-radius: 0px !important;
+          color: $secondary-light !important;
+          border: none !important;
+          -webkit-border-radius: 0px !important;
+          -moz-border-radius: 0px !important;
+          -ms-border-radius: 0px !important;
+          -o-border-radius: 0px !important;
+        }
+        .primary_button2 {
+          color: #000 !important;
+          font-weight: 600;
+          background-color: $primary-light !important;
+        }
+      }
+    }
+    &-right {
+      padding: calc($space);
+      border: 1px solid red;
+      @include flexColumnStart();
+      width: 40%;
+      height: 80%;
+      gap: 1rem;
+      .coffee-count {
+        padding: calc($space * 2);
+        border: 1px solid $senary-dark;
+        width: 100%;
+      }
+    }
+  }
+}

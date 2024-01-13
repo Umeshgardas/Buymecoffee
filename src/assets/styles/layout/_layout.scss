@@ -3,7 +3,7 @@
     color: var(--text-primary);
     height: 100vh;
     z-index: 999;
-  
+    overflow: auto;
     .mainLayout {
       @include flexRowStart();
       height: calc(100vh - 36px);
@@ -15,9 +15,11 @@
         flex-direction: column;
   
         &_body {
+          background-color: $secondary-light;
           width: 100%;
           padding: calc($space / 2.5);
-          height: calc(100vh - 68px);
+          height: 100%;
+          // height: calc(100vh - 68px);
         }
       }
     }

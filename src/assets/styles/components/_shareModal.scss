@@ -1,0 +1,197 @@
+.rs-modal-wrapper {
+  display: flex;
+  position: absolute;
+  background: rgba(1, 5, 20, 0.72);
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  z-index: 90;
+  display: flex !important;
+  @include flexCenter(column);
+
+  .rs-modal-dialog {
+    // transform: translate(30%, 70%) !important;
+    @include flexCenter(row);
+    width: 100% !important;
+    height: 236px !important;
+    border-radius: 4px;
+  }
+
+  .rs-modal-content {
+    max-width: 450px;
+    position: absolute;
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--webinar-modal-border);
+    color: var(--text-secondary);
+    z-index: 99 !important;
+    height: 236px !important;
+    box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04),
+      0px 8px 16px rgba(96, 97, 112, 0.16);
+
+    .rs-modal-header-close {
+      margin-top: calc($space / 2);
+
+      svg {
+        height: 8px;
+        width: 8px;
+        color: var(--text-secondary);
+      }
+    }
+
+    .webinar-modal {
+      @include flexCenter(column);
+      height: 198px !important;
+      gap: 12px;
+
+      &-header {
+        @include flexCenter(column);
+
+        p {
+          font-family: "Roboto";
+          font-style: normal;
+          font-size: $fontsize-large2;
+          font-weight: 600;
+          line-height: 150%;
+          margin-bottom: calc($space / 1.25);
+        }
+
+        span {
+          text-align: center;
+          font-family: "Roboto";
+          font-size: $fontsize-default;
+          font-weight: 400;
+          line-height: 146%;
+          letter-spacing: 0.02em;
+        }
+      }
+
+      &-icons {
+        @include flexCenter(row);
+        gap: 16px;
+
+        .social_media {
+          .react-share__ShareButton {
+            height: 48px !important;
+            width: 48px !important;
+          }
+
+          .ImageRes-container {
+            background-color: var(--ag-selection) !important;
+            border: 1px solid var(--webinar-modal-border);
+            @include flexCenter(column);
+            border-radius: 25px;
+
+            .ImageRes-container-img {
+              height: 24px !important;
+              width: 24px !important;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+
+      &-link {
+        width: 80%;
+        height: 28px;
+        @include flexRowBetweenCenter();
+        border: 1px solid var(--webinar-modal-copy-link) !important;
+        border-radius: 4px;
+
+        p {
+          padding: calc($space / 1.42) calc($space * 1.2);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: calc(100% - 75px);
+        }
+
+        button {
+          color: white;
+          background-color: var(--webinar-modal-copy-link);
+          padding: calc($space / 2) calc($space * 1.2);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+.custom-notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  transform: translate(-4%, 95%);
+  color: var(--text-primary);
+  z-index: 9999;
+  bottom: 20px;
+  right: 0;
+  top: 0;
+  height: 40px;
+  width: 388px;
+  padding: calc($space / 2);
+  border: 1px solid var(--tag-border-green) !important;
+  background-color: var(--tag-bg-green) !important;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  flex: 1 1 auto;
+
+  img {
+    width: 16px;
+    height: 16px;
+    margin-right: calc($space * 1);
+    justify-content: flex-start;
+  }
+
+  p {
+    font-family: "Roboto";
+    margin-left: calc($space * 1);
+    font-style: normal;
+    font-weight: 500;
+    font-size: $fontsize-default;
+    line-height: 130%;
+  }
+
+  .checkIcon {
+    width: 16px;
+    height: 16px;
+    border: none;
+    color: var(--primary-green);
+    border-radius: 50%;
+    margin-left: calc($space * 1);
+    cursor: pointer;
+  }
+
+  .closeIcon {
+    color: var(--primary-green);
+    margin-right: calc($space * 1);
+    margin-left: 160px;
+    width: 8px;
+    height: 8px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .checkIcon {
+    width: 16px;
+    height: 16px;
+    border: none;
+    color: var(--primary-green);
+    border-radius: 50%;
+    margin-left: calc($space * 1);
+    cursor: pointer;
+  }
+
+  .closeIcon {
+    color: var(--primary-green);
+    margin-right: calc($space * 0);
+    margin-left: calc($space * 15);
+    width: 8px;
+    height: 8px;
+    border: none;
+    cursor: pointer;
+  }
+
+}
