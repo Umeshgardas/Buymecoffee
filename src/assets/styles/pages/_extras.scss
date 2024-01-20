@@ -1,213 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
 .Extras_container {
   background: #fff;
   font-size: larger;
   padding: $space 0;
-  font-family: "Poppins", "sans-serif";
-
-  .extras_routes,
-  h1 {
+  font-family: "Roboto", sans-serif !important;
+  h2 {
+    font-family: "Roboto", sans-serif !important;
     margin: calc($space * 2) 0;
-
-    a,
-    a.active,
-    .supporters {
-      text-decoration: none;
-      background: $secondary-light;
-      cursor: pointer;
-      font-size: 20px;
-      padding: 10px;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-    a.active{
-      background: #ebf0ec;
-    }
+    color: $priamry-black;
+    font-weight: 600;
+  }
+  .extras_routes {
+    padding: calc($space) 0;
+  }
+  a,
+  a.active,
+  .supporters {
+    font-family: "Roboto", sans-serif !important;
+    text-decoration: none;
+    background: $secondary-light;
+    cursor: pointer;
+    color: $text-dark-muted;
+    font-size: calc($space) + 6;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  a.active {
+    color: $priamry-black;
+    background: #ebf0ec;
   }
 }
+
 .extras_form_container {
-  height: 80vh;
+  height: fit-content;
   position: relative;
   padding: 25px;
   border: 1px solid $primary-bd-gray;
   border-radius: 10px;
   font-size: 15px;
   font-weight: bold;
-
-  input {
+  margin-right: calc($space * 2);
+  &-inputs {
     width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    font-weight: 200;
-    background: transparent;
-    border: none;
-    background-color: $primary-bd-gray;
-    border-radius: $space;
-    font-size: 15px;
-    -webkit-border-radius: $space;
-    -moz-border-radius: $space;
-    -ms-border-radius: $space;
-    -o-border-radius: $space;
-}
-  .extras_form_containers-1 {
-    display: flex;
-    gap: 2rem;
-  }
-
- 
-
-  .offering {
-    width: 70%;
-    height: 4em;
-
-    .offering-input-container {
-      width: 100%;
-      height: 60%;
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
+    margin-bottom: 2rem;
+    .offering {
+      width: 80%;
     }
-  }
-  .offering-input-container:focus,
-  .price-input-container:focus {
-    box-shadow: 2px 2px 2px 2px lightgrey;
-  }
+    .price {
+      width: 30%;
+      .heading {
+        margin-bottom: $space;
+      }
+      .price-input-container {
+        padding-left: 8px;
+        margin-bottom: 10px !important;
+        border-radius: $space/2;
 
-  .price {
-    height: 4em;
-    width: 30%;
+        #doller {
+          background: transparent;
+        }
 
-    .price-input-container {
-      padding-left: 10px;
-      background-color: $primary-bd-gray;
+        input {
+          background: transparent !important;
+          margin-left: -15px;
+          font-weight: 500;
+          margin-top: 0px !important;
+        }
+        input:focus {
+          background: transparent;
+        }
+        input::placeholder {
+          padding-left: 10px !important;
+        }
 
-      #doller {
-        background-color: $primary-bd-gray;
+        .price-input-container:focus {
+          background-color: #fff;
+          box-shadow: 2px 2px 2px 2px lightgrey;
+        }
       }
     }
-    .price-input-container input {
-      padding-left: 2px;
-      margin-left: 3px;
+
+    label {
+      margin-bottom: calc($space * 2);
+      color: $priamry-black;
+    }
+
+    input {
+      margin-top: calc($space);
+      width: calc(100% - $space * 2);
+      height: 100%;
+      opacity: 0.5;
+      font-weight: 200;
+      background: transparent;
+      border: none;
+      background-color: $primary-bd-gray;
+      color: $priamry-black;
+      border-radius: $space/2;
+      padding: $space;
+      font-size: 15px;
+      -webkit-border-radius: $space/2;
+      -moz-border-radius: $space/2;
+      -ms-border-radius: $space/2;
+      -o-border-radius: $space/2;
+    }
+
+    input[type="text"]:focus {
+      width: calc(100% - $space * 2);
+      background-color: #fff;
+      box-shadow: 2px 2px 2px 2px lightgrey;
     }
   }
 
-  .offering-input-container,
-  .price-input-container {
-    width: 100%;
-    height: 60%;
-    border-radius: 5px;
-
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-
-  .price-input-container input:focus {
-    outline: none;
+  .inline {
+    @include flexRowBetweenStart();
+    gap: 2rem;
   }
 }
-.extras_form_containers input {
-  width: 100%;
-  margin-top: 10px;
-  border-radius: 5px;
-  height: 4em;
-}
+
 .choose_file_container {
-  margin-top: 30px;
-}
-
-.choose_file_container p {
-  margin-top: 5px;
-  opacity: 0.3;
-}
-.choose_file_container {
-  margin-top: 30px;
-}
-
-.choose_file_container p {
-  margin-top: 5px;
-  opacity: 0.3;
-}
-
-.extras_form_containers {
-  display: flex;
-  height: 4em;
-  margin-top: 20px;
-  flex-direction: column;
-  padding: 5px;
-}
-
-input {
-  width: 100%;
-  height: 100%;
-  padding-left: 1em;
-  opacity: 0.5;
-  font-weight: 200;
-  background: transparent;
-  border: none;
-  background-color: $primary-bd-gray;
-  border-radius: 10px;
-  font-size: 15px;
-}
-
-input[type="text"]:focus,
-.price-input-container:focus {
-  border: 1px solid rgb(254, 254, 254);
-  background-color: #fff;
-  box-shadow: 2px 2px 2px 2px lightgrey;
-}
-
-.extras_form_containers input {
-  width: 70%;
-  margin-top: 10px;
-  border-radius: 5px;
-  height: 4em;
+  label {
+    color: $priamry-black;
+  }
+  p {
+    margin-top: calc($space);
+  }
 }
 #note {
-  display: flex;
-  align-items: center;
-  width: 14%;
-}
-#question-icon {
-  margin-left: 5px;
+  #messageText::before {
+    content: "";
+    position: absolute;
+    left: -45%;
+    top: 100%;
+    transform: translateX(-50%);
+    border-bottom: 10px solid;
+    border-color: #000 #0000 #0000 #0000;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+
+  .question-container {
+    height: 18px;
+    position: relative;
+    display: inline-block;
+  }
+  #note:hover #messageText {
+    visibility: visible;
+    top: -585%;
+    opacity: 1;
+  }
+  #messageText {
+    position: absolute;
+    top: -40px; /* Adjust the distance above the question mark */
+    left: 50%; /* Centered horizontally */
+    transform: translateX(-50%); /* Centering trick for absolute positioning */
+    width: 150px; /* Adjust the width of the modal */
+    background: #333; /* Background color for the modal */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+    z-index: 1000;
+    color: #fff; /* Text color */
+    font-weight: 500;
+    font-size: $fontsize-large1;
+  }
+
+  .question-container:hover #messageText {
+    display: block;
+    top: -450%;
+  }
 }
 
-#messageText {
-  position: absolute;
-  left: 9%;
-  top: 24%;
-  transform: translateX(0);
-  background-color: #000;
-  color: #fff;
-  white-space: nowrap;
-  padding: 10px 15px;
-  border-radius: 7px;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-#messageText::before {
-  content: "";
-  position: absolute;
-  left: 10%;
-  top: 100%;
-  transform: translateX(-50%);
-  border: 15px solid;
-  border-color: #000 #0000 #0000 #0000;
-}
-
-#note:hover #messageText {
-  visibility: visible;
-  top: 25%;
-  opacity: 1;
-}
 .choose_file_container input {
   opacity: 1;
   background: transparent;
   margin-top: 5px;
-}
-.choose_file {
-  padding: 0 !important;
-  border-radius: 0 !important;
 }

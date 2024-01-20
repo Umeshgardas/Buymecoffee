@@ -2,45 +2,70 @@ import React, { useState } from "react";
 import { AiTwotoneQuestionCircle } from "react-icons/ai";
 
 function MyExtras() {
- 
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
+
+
+  const divStyle = {
+    backgroundColor: isFocused ? '#fff' : '#E0E5E9',
+  };
   return (
     <>
       <form action="" className="extras_form_container">
-        <div className="extras_form_containers-1">
+        <div className="extras_form_container-inputs inline">
           <div className="offering">
-            <div>What are you offering?</div>
+            <label>What are you offering?</label>
             <div className="offering-input-container">
               <input type="text" />
             </div>
           </div>
           <div className="price">
-            <div>Price</div>
-            <div className="price-input-container">
-              <span id="doller">$</span>
-              <input type="text" placeholder="26" />
+            <div className="heading">Price</div>
+            <div className="price-input-container"
+            style={divStyle}
+            onFocus={handleFocus}
+            onBlur={handleBlur}>
+              <span id="doller" htmlFor="dollarInput">$</span>
+              <input type="text" title="$" placeholder="26" />
             </div>
           </div>
         </div>
-        <div className="extras_form_containers">
-          <div>Description</div>
+        <div className="extras_form_container-inputs">
+          <label>Description</label>
           <input type="text" placeholder="Describe" />
         </div>
-        <div className="extras_form_containers">
-          <div id="note">
+        <div className="extras_form_container-inputs">
+          <label id="note">
             Confirmation message
-            <span id="messageText">
-              if you'd like addtionalinformation to fulfill this offering, you
-              can leave a question here{" "}
+            <span
+              className="question-container"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              {isHovered && (
+                <span id="messageText">
+                  if you'd like additional information to fulfill this offering,
+                  you can leave a question here{" "}
+                </span>
+              )}
+              <AiTwotoneQuestionCircle id="question-icon" />
             </span>
-            <AiTwotoneQuestionCircle id="question-icon" />
-          </div>
+          </label>
           <input
             type="text"
             placeholder="Eg : Thank you,Here's is your extra:https://m/scl..."
           />
         </div>
         <div className="choose_file_container">
-          <div>Choose an image</div>
+          <label>Choose an image</label>
           <p>Recommoeded size: by 460 by 200 pixels</p>
           <input
             type="file"

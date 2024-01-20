@@ -3,19 +3,15 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import Profile from "./pages/profile";
 import Signup from "./pages/signup";
 import Layout from "./common/layouts";
+import { useSearch } from "rsuite/esm/Picker";
+import { useState } from "react";
+import Dashboard from "./pages/dashboard";
 
 function App() {
-  let activeStyle = {
-    textDecoration: "underline"
-  };
-  let isNotActive = {
-    textDecoration: "none"
-  };
+  const [isAuth, setIsAuth] = useState(true);
 
   return (
-    <div className="App">
-     <Layout></Layout>
-    </div>
+    <div className="App">{isAuth ? <Layout></Layout> : <Signup />}</div>
   );
 }
 

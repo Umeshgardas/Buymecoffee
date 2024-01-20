@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaHome, FaUser, FaStar, FaSignInAlt } from "react-icons/fa";
 import { MdOutlineInsertChart } from "react-icons/md";
 import { RiShoppingBasketFill } from "react-icons/ri";
@@ -10,25 +10,22 @@ function Sidebar() {
     <nav className="sidebar">
       <ul>
         <li>
-          <Link to="/">
+          <NavLink to="/">
             <MdOutlineInsertChart />
             Dashboard
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/profile">
+          <NavLink to="/profile">
             <IoMdHeartEmpty />
             Profile
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/extras/myextras">
+          <NavLink to="/extras/myextras">
             <RiShoppingBasketFill />
             Extras
-          </Link>
-        </li>
-        <li>
-          <Link to="/signup">Signup</Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

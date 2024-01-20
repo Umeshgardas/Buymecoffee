@@ -1,27 +1,39 @@
 .Layout {
-    background: var(--bg-primary);
-    color: var(--text-primary);
-    height: 100vh;
-    z-index: 999;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  height: 100vh;
+  z-index: 999;
+  @include res(tab-lg) {
     overflow: auto;
-    .mainLayout {
-      @include flexRowStart();
+    height: 100%;
+    @include WebkitScrollYFixedWidth();
+  }
+  .mainLayout {
+    @include flexRowStart();
+    height: calc(100vh - 36px);
+    @include res(tab-lg) {
+      overflow: auto;
+      height: 100%;
+      @include WebkitScrollYFixedWidth();
+    }
+    &-inner {
+      flex: 1;
       height: calc(100vh - 36px);
-  
-      &-inner {
-        flex: 1;
-        height: calc(100vh - 36px);
-        display: flex;
-        flex-direction: column;
-  
-        &_body {
-          background-color: $secondary-light;
-          width: 100%;
-          padding: calc($space / 2.5);
-          height: 100%;
-          // height: calc(100vh - 68px);
-        }
+      display: flex;
+      flex-direction: column;
+      @include res(tab-lg) {
+        overflow: auto;
+        height: 100%;
+        @include WebkitScrollYFixedWidth();
+        margin: 0 !important;
+      }
+      &_body {
+        background-color: $secondary-light;
+        width: 100%;
+        padding: calc($space / 2.5);
+        height: 100%;
+        // height: calc(100vh - 68px);
       }
     }
   }
-  
+}

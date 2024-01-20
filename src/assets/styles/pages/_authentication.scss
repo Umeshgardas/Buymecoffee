@@ -1,8 +1,7 @@
 .authentication {
   height: 100%;
   width: 100%;
-  font-family: "Poppins", sans-serif !important;
-
+font-family: 'Roboto', sans-serif;
   // margin: calc($space *6);
   @include flexCenter(row);
   background-color: $primary-bg-light !important;
@@ -31,8 +30,7 @@
           width: 100%;
           height: 100%;
           color: $primary-light;
-          font-family: "Poppins", sans-serif;
-          display: flex;
+font-family: 'Roboto', sans-serif;          display: flex;
           flex-direction: column;
           justify-content: space-around;
           .logo {
@@ -50,8 +48,7 @@
               font-size: $fontsize-large7;
               color: $secondary-light;
               line-height: 150%;
-              font-family: "Poppins";
-            }
+font-family: 'Roboto', sans-serif;            }
           }
         }
       }
@@ -331,8 +328,7 @@
           text-align: left;
           width: 338px;
           height: 100%;
-          font-family: "Roboto" !important;
-          position: relative;
+font-family: 'Roboto', sans-serif;          position: relative;
 
           @include res(tab-lg) {
             @include flexColumnStartCenter();
@@ -378,8 +374,7 @@
             color: black !important;
             font-size: $fontsize-large1;
             font-weight: 500;
-            font-family: "Poppins", sans-serif;
-            border-radius: 4px;
+font-family: 'Roboto', sans-serif;            border-radius: 4px;
             .facebook-icon {
               color: #3e71b6;
             }
@@ -394,8 +389,7 @@
             width: 100%;
             @include flexRowBetweenCenter();
             gap: 1rem;
-            font-family: "Poppins", sans-serif;
-            .horizontal-line {
+font-family: 'Roboto', sans-serif;            .horizontal-line {
               width: 100%;
               border-top: 1px solid $grey-1 !important; /* Adjust the color and thickness as needed */
               margin: 10px 0; /* Adjust the margin as needed */
@@ -498,8 +492,7 @@
 
           .signup_para {
             font-size: $fontsize-default !important;
-            font-family: "Poppins", sans-serif !important;
-            line-height: 130%;
+font-family: 'Roboto', sans-serif;            line-height: 130%;
             color: var(--text-primary);
             text-align: center;
             @include flexCenter(column);
@@ -510,8 +503,7 @@
             font-weight: 600 !important;
             font-weight: 400;
             font-size: $fontsize-default;
-            font-family: "Poppins", sans-serif !important;
-            line-height: 130%;
+font-family: 'Roboto', sans-serif;            line-height: 130%;
             color: $text-dark-primary !important;
 
             @include res(tab-lg) {

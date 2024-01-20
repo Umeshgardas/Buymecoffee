@@ -12,6 +12,7 @@
   .rs-modal-body {
     margin-top: calc($space * 0);
     padding-bottom: calc($space * 0);
+    width: fit-content  ;
   }
 
   &-body {
@@ -273,4 +274,8 @@
       }
     }
   }
+}
+
+.General_Modal{
+  
 }
