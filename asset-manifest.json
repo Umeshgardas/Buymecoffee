@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Buymecoffee/static/css/main.4f4e17cf.css",
-    "main.js": "/Buymecoffee/static/js/main.e51543af.js",
+    "main.css": "/Buymecoffee/static/css/main.9e171881.css",
+    "main.js": "/Buymecoffee/static/js/main.9c9a0ef8.js",
     "index.html": "/Buymecoffee/index.html",
-    "main.4f4e17cf.css.map": "/Buymecoffee/static/css/main.4f4e17cf.css.map",
-    "main.e51543af.js.map": "/Buymecoffee/static/js/main.e51543af.js.map"
+    "main.9e171881.css.map": "/Buymecoffee/static/css/main.9e171881.css.map",
+    "main.9c9a0ef8.js.map": "/Buymecoffee/static/js/main.9c9a0ef8.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f4e17cf.css",
-    "static/js/main.e51543af.js"
+    "static/css/main.9e171881.css",
+    "static/js/main.9c9a0ef8.js"
   ]
 }
