@@ -179,6 +179,10 @@
     display: block;
     top: -450%;
   }
+  .question-container:hover #messageText {
+    display: block;
+    top: -450%;
+  }
 }
 
 .choose_file_container input {
