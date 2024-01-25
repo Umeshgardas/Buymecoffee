@@ -3,8 +3,11 @@
 import React from "react";
 import { FaUser } from "react-icons/fa";
 import { SiBuymeacoffee } from "react-icons/si";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <header>
       <div className="logo">
@@ -12,7 +15,9 @@ const Header = () => {
         <SiBuymeacoffee />
       </div>
       <div className="user_avatar">
-      <button className="myPageButton">My Page</button>
+        <button className="myPageButton" onClick={() => navigate("/signup")}>
+          My Page
+        </button>
         {/* Using a user avatar icon from react-icons */}
         <FaUser />
       </div>
