@@ -1,34 +1,134 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { FaHome, FaUser, FaStar, FaSignInAlt } from "react-icons/fa";
-import { MdOutlineInsertChart } from "react-icons/md";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { MdLockOutline, MdOutlineInsertChart } from "react-icons/md";
 import { RiShoppingBasketFill } from "react-icons/ri";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { HiX } from "react-icons/hi";
+import { FaBars, FaReact } from "react-icons/fa";
+import { TbNotes, TbUserSquareRounded } from "react-icons/tb";
+import { IoSettingsOutline } from "react-icons/io5";
 
-function Sidebar() {
+const sidebarLink = [
+  {
+    icon: <MdOutlineInsertChart />,
+    name: "Dashboard",
+    path: "/",
+  },
+  {
+    icon: <IoMdHeartEmpty />,
+    name: "Supporters",
+    path: "/profile",
+  },
+  {
+    icon: <MdLockOutline />,
+    name: "Membership",
+    path: "/membership",
+  },
+  {
+    icon: <RiShoppingBasketFill />,
+    name: "Extras",
+    path: "/extras/myextras",
+  },
+  {
+    icon: <TbNotes />,
+    name: "Posts",
+    path: "/posts",
+  },
+  {
+    icon: <TbUserSquareRounded />,
+    name: "Page settings",
+    path: "/pagesettings",
+  },
+  {
+    icon: <IoSettingsOutline />,
+    name: "Settings",
+    path: "/settings",
+  },
+];
+
+function Sidebar({ onChange }) {
+  const [toggleIcon, setToggleIcon] = useState(false);
+
+  const handleToggleIcon = () => {
+    setToggleIcon(!toggleIcon);
+    onChange(!toggleIcon);
+  };
+
   return (
-    <nav className="sidebar">
+    <div style={{ width: toggleIcon ? "200px" : "50px" }} className="sidebar">
+      <div className="sidebar__top_section">
+        {/* <div
+            style={{ marginLeft: toggleIcon ? "0px" : "0px" }}
+            className="bars"
+          >
+            <FaBars onClick={handleToggleIcon} />
+          </div>
+         */}
+        <FaBars size={20} onClick={handleToggleIcon} />
+        <div
+          style={{
+            display: toggleIcon ? "block" : "none",
+          }}
+          className="sidebar__top_section__logo"
+        >
+          Logo
+        </div>
+      </div>
+      {sidebarLink.map((item, index) => (
+        <NavLink
+          to={item.path}
+          key={index}
+          className="sidebar__link"
+          activeclassName="active"
+        >
+          <div className="sidebar__link__icon">{item.icon}</div>
+          <div
+            style={{ display: toggleIcon ? "block" : "none" }}
+            className="link_text"
+          >
+            {item.name}
+          </div>
+        </NavLink>
+      ))}
+    </div>
+    // <nav className="navbar">
+    //   <ul className={`navbar__container__menu ${toggleIcon ? "active" : " "} `}>
+    //     {sidebarLink.map((item) => (
+    //       <li className="navbar__container__menu__item">
+    //         <Link className="navbar__container__menu__item__links" to={item.to}>
+    //           {item.icon}
+    //           <span className="label">{item.label}</span>
+    //         </Link>
+    //       </li>
+    //     ))}
+    //   </ul>
+
+    //   <div className="nav-icon" onClick={handleToggleIcon}>
+    //     {toggleIcon ? <HiX size={30} /> : <FaBars size={30} />}
+    //   </div>
+    // </nav>
+
+    /* <nav className="sidebar">
       <ul>
         <li>
           <NavLink to="/">
-            <MdOutlineInsertChart />
             Dashboard
           </NavLink>
         </li>
         <li>
           <NavLink to="/profile">
-            <IoMdHeartEmpty />
+   
             Profile
           </NavLink>
         </li>
         <li>
           <NavLink to="/extras/myextras">
-            <RiShoppingBasketFill />
+           
             Extras
           </NavLink>
         </li>
       </ul>
-    </nav>
+    </nav> */
   );
 }
 

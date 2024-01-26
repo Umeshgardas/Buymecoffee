@@ -11,11 +11,12 @@ import MyExtras from "../../pages/extras/myextras";
 
 const Layout = ({ children }) => {
   const parentRef = useRef();
-  const navigate = useNavigate();
-  // useEffect(() => {
-  //   navigate("/");
-  // }, []);
+  const [inputValue, setInputValue] = useState('');
 
+  const handleInputChange = (value) => {
+    setInputValue(value);
+  };
+  
   return (
     <>
       <div id="navLength"></div>
@@ -29,7 +30,7 @@ const Layout = ({ children }) => {
       <main className={`Layout`}>
         <Header />
         <div className="mainLayout">
-          <LayoutSidebar />
+          <LayoutSidebar onChange={handleInputChange} />
           <div className="mainLayout-inner" ref={parentRef}>
             <div className="mainLayout-inner_body">
               {children}

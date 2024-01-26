@@ -1,191 +1,194 @@
-.rs-modal-content {
-  width: 800px;
-  .widget {
-    display: flex;
-    height: 90%;
-    width: 70%;
-    // margin-top: 2%;
-    @include flexCenter(row);
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    &_inner {
-      height: 100%;
-      width: 100%;
-      gap: $space * 2;
-      @include flexRowBetweenCenter();
-      &-left {
-        width: 55%;
-        padding: calc($space);
-        @include flexColumnStart();
-        gap: 1rem;
-        .header {
-          h2 {
-            color: $priamry-black;
-          }
-        }
-        .position {
-          display: flex;
-          flex-direction: column;
-          gap: calc($space/2);
-          span {
-            margin-bottom: $space;
-            color: $text-dark-muted;
-            font-size: $fontsize-small1;
-          }
-          label {
-            font-size: $fontsize-default;
-            font-weight: 600 !important;
-            line-height: 120%;
-          }
-          &_inner {
-            @include flexCenter(row);
-            .input-row {
-              @include flexCenter(row);
-              width: 50% !important;
-              .rs-input-group {
-                @include flexCenter(row);
-                gap: calc($space/2);
-              }
-            }
-          }
-        }
-        .input-set {
-          label {
-            color: $priamry-black;
-          }
-          .input-row {
-            width: 80%;
-          }
-          .colors {
-            @include flexCenter(row);
-            border: 1px solid $senary-dark !important;
-          }
-        }
-        .button {
-          height: 100%;
-          width: 100%;
-          @include flexRowStart();
-          gap: $space;
-          .rs-btn-primary {
-            height: calc($space * 4);
-            width: calc($space * 10);
-            font-family: "Roboto", sans-serif !important;
-            background-color: $primary-orange !important;
-            border-radius: 0px !important;
-            color: $secondary-light !important;
-            border: none !important;
-            -webkit-border-radius: 0px !important;
-            -moz-border-radius: 0px !important;
-            -ms-border-radius: 0px !important;
-            -o-border-radius: 0px !important;
-          }
-          .primary_button2 {
-            color: #000 !important;
-            font-weight: 600;
-            background-color: $primary-light !important;
-          }
-        }
-      }
-      &-right {
-        width: 40%;
-        height: fit-content;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        &-inner {
+.rs-modal-wrapper {
+  position: relative;
+  .rs-modal-content {
+    width: 800px;
+    .widget {
+      display: flex;
+      height: 90%;
+      width: 70%;
+      // margin-top: 2%;
+      @include flexCenter(row);
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      &_inner {
+        height: 100%;
+        width: 100%;
+        gap: $space * 2;
+        @include flexRowBetweenCenter();
+        &-left {
+          width: 55%;
           padding: calc($space);
           @include flexColumnStart();
-          width: fit-content;
-          height: fit-content;
-          border-top: 5px solid $primary-orange;
           gap: 1rem;
-          border-radius: $space/2;
           .header {
-            h4 {
+            h2 {
               color: $priamry-black;
-              span {
-                color: #d8d6df;
-              }
             }
           }
-
-          .input-set {
-            .input-row {
-              width: 100%;
-            }
-          }
-          .rs-btn-primary {
-            height: calc($space * 4);
-            width: 100%;
-            font-family: "Roboto", sans-serif !important;
-            background-color: $primary-orange !important;
-            border-radius: 0px !important;
-            color: $secondary-light !important;
-            border: none !important;
-            -webkit-border-radius: 0px !important;
-            -moz-border-radius: 0px !important;
-            -ms-border-radius: 0px !important;
-            -o-border-radius: 0px !important;
+          .position {
+            display: flex;
+            flex-direction: column;
+            gap: calc($space/2);
             span {
-              color: $senary-light;
+              margin-bottom: $space;
+              color: $text-dark-muted;
+              font-size: $fontsize-small1;
             }
-          }
-
-          .privatemsg {
-            @include flexCenter(row);
-            gap: $space;
-            color: $priamry-black;
-            font-size: $fontsize-default;
-            font-weight: 600;
-            input {
-              height: $space;
-              width: $space;
-            }
-            span.que {
-              @include flexCenter(row);
-              height: $space + 5;
-              width: $space + 5;
-              color: $primary-orange;
-              border: 1px solid $text-dark-muted;
-              border-radius: $space;
-              -webkit-border-radius: $space;
-              -moz-border-radius: $space;
-              -ms-border-radius: $space;
-              -o-border-radius: $space;
-            }
-          }
-
-          .recent_coffee {
-            &-avatar {
-              color: $priamry-black;
+            label {
               font-size: $fontsize-default;
-              font-weight: 600;
-              gap: $space;
+              font-weight: 600 !important;
+              line-height: 120%;
+            }
+            &_inner {
               @include flexCenter(row);
-              span.bought {
-                color: $text-dark-muted;
-                font-size: $fontsize-default;
-                font-weight: 600;
-              }
-              .rs-avatar {
-                height: 40px;
-                width: 40px;
-                img {
-                  object-fit: contain;
-                  height: 40px;
-                  width: 40px;
+              .input-row {
+                @include flexCenter(row);
+                width: 50% !important;
+                .rs-input-group {
+                  @include flexCenter(row);
+                  gap: calc($space/2);
                 }
               }
             }
           }
-          .coffee-count {
-            padding: calc($space * 2);
-            border: 1px solid $text-light-muted;
-            width: calc(100% - 42px);
+          .input-set {
+            label {
+              color: $priamry-black;
+            }
+            .input-row {
+              width: 80%;
+            }
+            .colors {
+              @include flexCenter(row);
+              border: 1px solid $senary-dark !important;
+            }
+          }
+          .button {
+            height: 100%;
+            width: 100%;
+            @include flexRowStart();
+            gap: $space;
+            .rs-btn-primary {
+              height: calc($space * 4);
+              width: calc($space * 10);
+              font-family: "Roboto", sans-serif !important;
+              background-color: $primary-orange !important;
+              border-radius: 0px !important;
+              color: $secondary-light !important;
+              border: none !important;
+              -webkit-border-radius: 0px !important;
+              -moz-border-radius: 0px !important;
+              -ms-border-radius: 0px !important;
+              -o-border-radius: 0px !important;
+            }
+            .primary_button2 {
+              color: #000 !important;
+              font-weight: 600;
+              background-color: $primary-light !important;
+            }
           }
         }
-        .secured {
-          border-top: 1px solid $secondary-light;
-          height: $space * 4;
-          @include flexCenter(row);
+        &-right {
+          width: 40%;
+          height: fit-content;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          &-inner {
+            padding: calc($space);
+            @include flexColumnStart();
+            width: fit-content;
+            height: fit-content;
+            border-top: 5px solid $primary-orange;
+            gap: 1rem;
+            border-radius: $space/2;
+            .header {
+              h4 {
+                color: $priamry-black;
+                span {
+                  color: #d8d6df;
+                }
+              }
+            }
+
+            .input-set {
+              .input-row {
+                width: 100%;
+              }
+            }
+            .rs-btn-primary {
+              height: calc($space * 4);
+              width: 100%;
+              font-family: "Roboto", sans-serif !important;
+              background-color: $primary-orange !important;
+              border-radius: 0px !important;
+              color: $secondary-light !important;
+              border: none !important;
+              -webkit-border-radius: 0px !important;
+              -moz-border-radius: 0px !important;
+              -ms-border-radius: 0px !important;
+              -o-border-radius: 0px !important;
+              span {
+                color: $senary-light;
+              }
+            }
+
+            .privatemsg {
+              @include flexCenter(row);
+              gap: $space;
+              color: $priamry-black;
+              font-size: $fontsize-default;
+              font-weight: 600;
+              input {
+                height: $space;
+                width: $space;
+              }
+              span.que {
+                @include flexCenter(row);
+                height: $space + 5;
+                width: $space + 5;
+                color: $primary-orange;
+                border: 1px solid $text-dark-muted;
+                border-radius: $space;
+                -webkit-border-radius: $space;
+                -moz-border-radius: $space;
+                -ms-border-radius: $space;
+                -o-border-radius: $space;
+              }
+            }
+
+            .recent_coffee {
+              &-avatar {
+                color: $priamry-black;
+                font-size: $fontsize-default;
+                font-weight: 600;
+                gap: $space;
+                @include flexCenter(row);
+                span.bought {
+                  color: $text-dark-muted;
+                  font-size: $fontsize-default;
+                  font-weight: 600;
+                }
+                .rs-avatar {
+                  height: 40px;
+                  width: 40px;
+                  img {
+                    object-fit: contain;
+                    height: 40px;
+                    width: 40px;
+                  }
+                }
+              }
+            }
+            .coffee-count {
+              padding: calc($space * 2);
+              border: 1px solid $text-light-muted;
+              width: calc(100% - 42px);
+            }
+          }
+          .secured {
+            border-top: 1px solid $secondary-light;
+            height: $space * 4;
+            @include flexCenter(row);
+          }
         }
       }
     }

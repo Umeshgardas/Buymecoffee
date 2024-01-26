@@ -1,39 +1,46 @@
-// Sidebar.scss
-
+// Sidebar
 .sidebar {
-  background-color: #fff; /* White background */
-  color: #000; /* Black text color */
-  width: 200px; /* Sidebar width */
-  padding: 20px; /* Padding for the links */
-  @include flexColumnStartCenter();
-  height: 100%;
+  background-color: $secondary-light;
+  color: $priamry-black;
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
+  &__top_section {
+    display: flex;
+    align-items: center;
+    padding: calc($space * 2) calc($space * 2)-5;
+    // padding: 20px 15px;
+    gap: $radius * 3;
 
-  ul {
-    list-style-type: none; /* Remove list styling */
-    padding: 0;
-    li {
-      padding: $space;
-      margin-bottom: 10px; /* Adjust spacing between sidebar items */
+    &__logo {
       font-size: $fontsize-large1;
-      font-family: "Roboto", sans-serif;
-      a {
-        text-decoration: none;
-        color: #000; /* Link color */
-        display: flex; /* Align icon and text horizontally */
-        align-items: center; /* Center items vertically */
-        font-weight: 500 !important;
+      
+    }
+    .bars {
+      display: flex;
+    }
+  }
+  &__link {
+    display: flex;
+    color: $priamry-black;
+    text-decoration: none !important;
+    align-items: center;
+    font-weight: 500 !important;
+    gap: $radius * 3;
+    transition: all 1s;
+    line-height: 40px;
+    padding: calc($space)-4 calc($space * 2)-5;
+    font-size: $fontsize-large1;
+    font-family: "Roboto", sans-serif;
 
-        svg {
-          height: $space * 2;
-          width: $space * 2;
-          margin-right: 10px; /* Adjust spacing between icon and text */
-        }
-      }
-      a:hover,
-      a:active,
-      a:focus {
-        color: $primary-orange;
-      }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary-orange;
+      transition: all 0.5s;
+    }
+    &__icon {
+      font-size: 20px;
     }
   }
 }

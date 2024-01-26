@@ -12,7 +12,6 @@
   @include flexCenter(column);
 
   .rs-modal-dialog {
-    // transform: translate(30%, 70%) !important;
     @include flexCenter(row);
     width: 100% !important;
     height: 236px !important;
@@ -21,6 +20,9 @@
 
   .rs-modal-content {
     max-width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
     position: absolute;
     background-color: var(--bg-secondary) !important;
     border: 1px solid var(--webinar-modal-border);
@@ -193,5 +195,4 @@
     border: none;
     cursor: pointer;
   }
-
 }

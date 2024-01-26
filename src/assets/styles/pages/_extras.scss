@@ -4,9 +4,9 @@
   background: #fff;
   font-size: larger;
   padding: $space 0;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   h2 {
-    font-family: "Roboto", sans-serif !important;
+    font-family: "Poppins", sans-serif !important;
     margin: calc($space * 2) 0;
     color: $priamry-black;
     font-weight: 600;
@@ -14,18 +14,22 @@
   .extras_routes {
     padding: calc($space) 0;
   }
+
   a,
   a.active,
   .supporters {
-    font-family: "Roboto", sans-serif !important;
+    font-family: "Poppins", sans-serif !important;
     text-decoration: none;
     background: $secondary-light;
     cursor: pointer;
     color: $text-dark-muted;
     font-size: calc($space) + 6;
-    padding: 10px;
-    border-radius: 10px;
+    padding: calc($space);
+    border-radius: calc($radius * 2);
     font-weight: 600;
+    @include res(tab-lg) {
+      padding: calc($space/2);
+    }
   }
   a.active {
     color: $priamry-black;
@@ -36,12 +40,16 @@
 .extras_form_container {
   height: fit-content;
   position: relative;
-  padding: 25px;
+  padding: calc($space * 3)-5;
   border: 1px solid $primary-bd-gray;
   border-radius: 10px;
   font-size: 15px;
   font-weight: bold;
   margin-right: calc($space * 2);
+  
+  @include res(tab-lg) {
+    padding: calc($space * 2)-5;
+  }
   &-inputs {
     width: 100%;
     margin-bottom: 2rem;
@@ -50,35 +58,23 @@
     }
     .price {
       width: 30%;
-      .heading {
-        margin-bottom: $space;
+      .input-container {
+        position: relative;
       }
-      .price-input-container {
-        padding-left: 8px;
-        margin-bottom: 10px !important;
-        border-radius: $space/2;
 
-        #doller {
-          background: transparent;
-        }
+      .dollar-symbol {
+        position: absolute;
+        left: 10px; // Adjust the position as needed
+        top: 50%;
+        background: transparent;
+        transform: translateY(-30%);
+      }
 
-        input {
-          background: transparent !important;
-          margin-left: -15px;
-          font-weight: 500;
-          margin-top: 0px !important;
-        }
-        input:focus {
-          background: transparent;
-        }
-        input::placeholder {
-          padding-left: 10px !important;
-        }
-
-        .price-input-container:focus {
-          background-color: #fff;
-          box-shadow: 2px 2px 2px 2px lightgrey;
-        }
+      .input-field {
+        padding-left: calc($space * 3)-5;
+      }
+      .input-field:focus {
+        background: transparent !important;
       }
     }
 
@@ -95,10 +91,13 @@
       font-weight: 200;
       background: transparent;
       border: none;
+      caret-color: black !important;
+
       background-color: $primary-bd-gray;
       color: $priamry-black;
       border-radius: $space/2;
       padding: $space;
+      padding-right: 3px;
       font-size: 15px;
       -webkit-border-radius: $space/2;
       -moz-border-radius: $space/2;
@@ -108,7 +107,7 @@
 
     input[type="text"]:focus {
       width: calc(100% - $space * 2);
-      background-color: #fff;
+      background-color: transparent;
       box-shadow: 2px 2px 2px 2px lightgrey;
     }
   }
@@ -116,6 +115,9 @@
   .inline {
     @include flexRowBetweenStart();
     gap: 2rem;
+    @include res(tab-lg) {
+      gap: 1rem;
+    }
   }
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiTwotoneQuestionCircle } from "react-icons/ai";
+import { isValidNumber } from "../../helpers/regex";
 
 function MyExtras() {
   const [isHovered, setIsHovered] = useState(false);
@@ -13,9 +14,8 @@ function MyExtras() {
     setIsFocused(false);
   };
 
-
   const divStyle = {
-    backgroundColor: isFocused ? '#fff' : '#E0E5E9',
+    backgroundColor: isFocused ? "#fff" : "#E0E5E9",
   };
   return (
     <>
@@ -29,14 +29,36 @@ function MyExtras() {
           </div>
           <div className="price">
             <div className="heading">Price</div>
+            <div className="input-container">
+              <span className="dollar-symbol">$</span>
+              <input
+                type="number"
+                className="input-field"
+                placeholder="26"
+                min="0"
+                step="any" // Allows decimal input
+                onKeyDown={(e) => {
+                  // Prevents typing of '-' for negative numbers
+                  if (e.key === "-" || e.key === "+") {
+                    e.preventDefault();
+                  }
+                }}
+                onInput={(e) => isValidNumber(e.target.value)}
+              />
+            </div>
+          </div>
+          {/* <div className="price">
+            <div className="heading">Price</div>
             <div className="price-input-container"
             style={divStyle}
             onFocus={handleFocus}
             onBlur={handleBlur}>
               <span id="doller" htmlFor="dollarInput">$</span>
-              <input type="text" title="$" placeholder="26" />
+              <input type="number" title="$" placeholder="26" onInput={isValidNumber}
+
+              />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="extras_form_container-inputs">
           <label>Description</label>
