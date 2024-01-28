@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { MdLockOutline, MdOutlineInsertChart } from "react-icons/md";
-import { RiShoppingBasketFill } from "react-icons/ri";
 import { IoMdHeartEmpty } from "react-icons/io";
-import { HiX } from "react-icons/hi";
 import { FaBars, FaReact } from "react-icons/fa";
 import { TbNotes, TbUserSquareRounded } from "react-icons/tb";
 import { IoSettingsOutline } from "react-icons/io5";
+import { BsBasket } from "react-icons/bs";
 
 const sidebarLink = [
   {
@@ -25,7 +24,7 @@ const sidebarLink = [
     path: "/membership",
   },
   {
-    icon: <RiShoppingBasketFill />,
+    icon: <BsBasket />,
     name: "Extras",
     path: "/extras/myextras",
   },
@@ -57,13 +56,6 @@ function Sidebar({ onChange }) {
   return (
     <div style={{ width: toggleIcon ? "200px" : "50px" }} className="sidebar">
       <div className="sidebar__top_section">
-        {/* <div
-            style={{ marginLeft: toggleIcon ? "0px" : "0px" }}
-            className="bars"
-          >
-            <FaBars onClick={handleToggleIcon} />
-          </div>
-         */}
         <FaBars size={20} onClick={handleToggleIcon} />
         <div
           style={{

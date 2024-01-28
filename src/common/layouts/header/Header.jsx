@@ -12,7 +12,10 @@ const Header = () => {
     <header>
       <div className="logo">
         {/* Assuming you have a coffee logo available */}
-        <SiBuymeacoffee />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWcctLwxW_b2Y4LJUlAqxXs4YpGeb8djRd6ldmFhngLfAFl0b4"
+          alt=""
+        />
       </div>
       <div className="user_avatar">
         <button className="myPageButton" onClick={() => navigate("/signup")}>

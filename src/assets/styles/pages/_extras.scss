@@ -3,13 +3,19 @@
 .Extras_container {
   background: #fff;
   font-size: larger;
-  padding: $space 0;
+  padding: calc($space/2) 0;
   font-family: "Poppins", sans-serif !important;
+  @include res(tab-lg) {
+    padding: 0;
+  }
   h2 {
     font-family: "Poppins", sans-serif !important;
-    margin: calc($space * 2) 0;
+    margin-bottom: calc($space * 2);
     color: $priamry-black;
     font-weight: 600;
+    @include res(tab-lg) {
+      font-size: $fontsize-large4;
+    }
   }
   .extras_routes {
     padding: calc($space) 0;
@@ -46,7 +52,7 @@
   font-size: 15px;
   font-weight: bold;
   margin-right: calc($space * 2);
-  
+
   @include res(tab-lg) {
     padding: calc($space * 2)-5;
   }
@@ -54,10 +60,10 @@
     width: 100%;
     margin-bottom: 2rem;
     .offering {
-      width: 80%;
+      width: 75%;
     }
     .price {
-      width: 30%;
+      width: calc(23% - $space);
       .input-container {
         position: relative;
       }
@@ -113,10 +119,21 @@
   }
 
   .inline {
-    @include flexRowBetweenStart();
-    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
     @include res(tab-lg) {
-      gap: 1rem;
+      @include flexColumnBetweenStart();
+      .offering {
+        width: 100%;
+      }
+      .price {
+        width: calc(100% - $space * 2);
+        .input-field {
+          padding-left: calc($space * 3);
+        }
+      }
     }
   }
 }

@@ -32,6 +32,9 @@
         width: 100%;
         padding: calc($space / 2.5);
         height: 100%;
+        @include res(tab-lg) {
+          padding: 0 calc($space / 2.5);
+        }
         // height: calc(100vh - 68px);
       }
     }

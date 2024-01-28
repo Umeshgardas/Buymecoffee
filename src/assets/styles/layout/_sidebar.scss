@@ -5,16 +5,18 @@
   height: 100vh;
   width: 200px;
   transition: all 0.5s;
+  padding-left: calc($space * 6);
+  @include res(tab-lg) {
+    padding-left: 0;
+  }
   &__top_section {
     display: flex;
     align-items: center;
     padding: calc($space * 2) calc($space * 2)-5;
-    // padding: 20px 15px;
     gap: $radius * 3;
 
     &__logo {
       font-size: $fontsize-large1;
-      
     }
     .bars {
       display: flex;

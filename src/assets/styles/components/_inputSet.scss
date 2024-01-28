@@ -145,7 +145,7 @@
   input,
   textarea {
     background: none;
-    border: 1px solid $senary-dark;
+    // border: 1px solid $senary-dark;
     height: 28px;
     width: 100%;
     border-radius: $radius;
@@ -156,18 +156,18 @@
     padding: calc($space * 0.6) calc($space * 0.8);
 
     &:focus {
-      border: 1px solid $blue-light-200 !important;
+      // border: 1px solid $blue-light-200 !important;
       outline: none !important;
     }
 
     &:hover {
-      border: 1px solid $blue-light-200 !important;
+      // border: 1px solid $blue-light-200 !important;
       outline: none !important;
     }
 
     &:disabled {
-      background-color: var(--disabled-input-bg);
-      color: var(--disabled-input-text);
+      // background-color: var(--disabled-input-bg);
+      // color: var(--disabled-input-text);
     }
   }
 

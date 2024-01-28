@@ -1,4 +1,3 @@
-// Header.scss
 
 header {
   @include flexRowBetweenCenter();
@@ -6,8 +5,9 @@ header {
   background-color: $secondary-light; /* Orange background color */
   .logo {
     padding: calc($space/3);
+    color: #FBDF00;
     // border: 1px solid red;
-    svg {
+    img {
       width: 30px; /* Adjust the logo width */
       height: 30px; /* Adjust the logo height */
     }

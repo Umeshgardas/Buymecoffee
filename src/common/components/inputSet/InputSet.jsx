@@ -23,7 +23,7 @@ const InputSet = ({
   datepicker,
   preAddon,
   onSelect,
-  postAddon
+  postAddon,
 }) => {
   return (
     <div className="input-set">
@@ -51,7 +51,7 @@ const InputSet = ({
           )}
         </div>
       )}
-     
+
       <div className="input-row">
         {selectpicker ? (
           datepicker ? (
@@ -110,13 +110,9 @@ const InputSet = ({
               value={value}
               onChange={(v) => onChange(v)}
             />
-            {postAddon && (
-              <InputGroup.Addon className="post-addon">
-                {postAddon}
-              </InputGroup.Addon>
-            )}
           </InputGroup>
-        )}
+        )} 
+        &nbsp;&nbsp;{postAddon &&  <span>{postAddon}</span> }
         {removable && <AiOutlineMinusCircle className="remove-icon" />}
       </div>
       {error && <p className="error">{error}</p>}
