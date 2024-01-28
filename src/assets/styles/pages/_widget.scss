@@ -30,11 +30,12 @@
         }
         &-left {
           width: 55%;
-          padding: calc($space);
+          // padding: calc($space);
           @include flexColumnStart();
           gap: 1rem;
           @include res(tab-lg) {
-            width: 100%;
+            width: 93%;
+
           }
           .header {
             h2 {
@@ -151,11 +152,11 @@
         }
         &-right {
           width: 42%;
-          padding: 10px;
+          // padding: 10px;
           height: fit-content;
           @include res(tab-lg) {
             @include flexCenter(row);
-            width: 100%;
+            width: 93%;
           }
           &-inner {
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
