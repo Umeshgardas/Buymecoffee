@@ -35,7 +35,6 @@
           gap: 1rem;
           @include res(tab-lg) {
             width: 93%;
-
           }
           .header {
             h2 {
@@ -84,13 +83,12 @@
               &_dropdown {
                 .input-row {
                   width: 30%;
-                  .rs-picker-toggle{
+                  .rs-picker-toggle {
                     border: 1px solid var(--rs-border-primary) !important;
                     // border: 1px solid red !important;
                     background-color: #ffffff !important;
                     height: 40px;
                     width: 170%;
-
                   }
                   //   display: flex;
                   //   align-items: center;
@@ -152,20 +150,19 @@
         }
         &-right {
           width: 42%;
-          // padding: 10px;
           height: fit-content;
           @include res(tab-lg) {
             @include flexCenter(row);
             width: 93%;
           }
           &-inner {
+            gap: 1rem;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             padding: calc($space);
             @include flexColumnStart();
             width: fit-content;
             height: fit-content;
             border-top: 5px solid $primary-orange;
-            gap: 0.5rem;
             border-radius: $space/2;
             @include res(tab-lg) {
               width: 95%;
@@ -181,6 +178,8 @@
             }
             .widget_input {
               width: 100%;
+              @include flexColumnStart();
+              gap: 1rem;
               .input-set {
                 .input-row {
                   .rs-input-group {

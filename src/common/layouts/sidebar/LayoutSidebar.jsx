@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MdLockOutline, MdOutlineInsertChart } from "react-icons/md";
 import { IoMdHeartEmpty } from "react-icons/io";
-import { FaBars, FaReact } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { TbNotes, TbUserSquareRounded } from "react-icons/tb";
 import { IoSettingsOutline } from "react-icons/io5";
 import { BsBasket } from "react-icons/bs";
@@ -30,8 +30,8 @@ const sidebarLink = [
   },
   {
     icon: <TbNotes />,
-    name: "Posts",
-    path: "/posts",
+    name: "Post",
+    path: "/post",
   },
   {
     icon: <TbUserSquareRounded />,
@@ -71,7 +71,7 @@ function Sidebar({ onChange }) {
           to={item.path}
           key={index}
           className="sidebar__link"
-          activeclassName="active"
+          activeclassname="active"
         >
           <div className="sidebar__link__icon">{item.icon}</div>
           <div

@@ -262,7 +262,6 @@
         color: var(--text-primary);
         border-top: 1px solid $transparent;
         border-bottom: 1px solid $transparent;
-
         &:hover {
           color: var(--text-primary) !important;
           background-color: var(--ag-hover) !important;
@@ -312,8 +311,8 @@
       box-shadow: none !important;
       text-align: initial;
       vertical-align: middle;
-      padding: calc($space / 2.5) calc($space * 2.5) calc($space / 2.5)
-        calc($space / 2.5) !important;
+      // padding: calc($space / 2.5) calc($space * 2.5) calc($space / 2.5)
+      //   calc($space / 2.5) !important;
       border: 1px solid $transparent !important;
       border-radius: $radius;
       -webkit-border-radius: $radius;

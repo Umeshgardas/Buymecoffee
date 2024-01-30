@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { SiBuymeacoffee } from "react-icons/si";
 import InputSet from "../../common/components/inputSet/InputSet";
-import { Avatar, Button, Dropdown, Modal, SelectPicker } from "rsuite";
-import { FaCheck, FaCheckCircle } from "react-icons/fa";
-import { CiCoffeeCup } from "react-icons/ci";
+import { Avatar, Button,  Modal } from "rsuite";
+import { FaCheck,  } from "react-icons/fa";
 
-import ShareModal from "../../common/components/modals/ShareModal";
 const Profile = () => {
   const [selectedColor, setSelectedColor] = useState(null);
+  const [align, setAlign] = useState("right");
 
   const colors = [
     "#FF5733",
@@ -23,7 +21,6 @@ const Profile = () => {
   const [open, setOpen] = React.useState(true);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [openModal, setOpenModal] = useState(false);
 
   const [selectedNumber, setSelectedNumber] = useState("");
 
@@ -91,42 +88,25 @@ const Profile = () => {
                       </span>
                     ))}
                   </div>
-                  {/* <div>
-                <p>
-                  {selectedColor
-                    ? `Selected Color: ${selectedColor}`
-                    : "Select a color by clicking on a circle"}
-                </p>
-                {selectedColor && (
-                  <div
-                    style={{
-                      backgroundColor: selectedColor,
-                      width: "100px",
-                      height: "100px",
-                      borderRadius: "10px",
-                      margin: "10px",
-                      position: "relative",
-                    }}
-                  >
-                    <FaCheckCircle
-                      style={{
-                        position: "absolute",
-                        top: "50%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                        color: "#fff", // Adjust the color of the check mark
-                      }}
-                    />
-                  </div>
-                )}
-              </div> */}
+                 
                 </div>
                 <div className="position">
                   <label htmlFor="">Position on the website</label>
                   <span>Move the position of your widget</span>
                   <div className="position_inner">
                     <div className="position_inner_dropdown">
-                      <InputSet label={"Align"} selectpicker/>
+                      <InputSet
+                        label={"Gender"}
+                        selectpicker
+                        data={[
+                          { label: "Right", value: "right" },
+                          { label: "Left", value: "left" },
+                          { label: "Top", value: "top" },
+                          { label: "Bottom", value: "bottom"},
+                        ]}
+                        value={align}
+                        onChange={(v) => setAlign(v)}
+                      />
                     </div>
                     <div className="position_inner_inputpx">
                       <InputSet label={"Side spacing"} postAddon={"Px"} />
@@ -148,7 +128,6 @@ const Profile = () => {
 
               <div className="widget_inner-right">
                 <div className="widget_inner-right-inner">
-
                   <div className="header">
                     <h4>
                       Buy <span>Olivia Ysabelle</span> a coffee
@@ -209,11 +188,7 @@ const Profile = () => {
                     <label htmlFor="privateCheckbox">Private message</label>
                     <span className="question">?</span>
                   </div>
-                  {/*  <div className="privatemsg">
-                    <input type="checkbox" />
-                    <span>Private message</span>
-                    <span className="que">?</span>
-                  </div> */}
+                 
                   <Button appearance="primary" className="primary_button">
                     Support <span>($4)</span>
                   </Button>
@@ -233,14 +208,13 @@ const Profile = () => {
                     </div>
                   </div>
                   <div className="secured">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWcctLwxW_b2Y4LJUlAqxXs4YpGeb8djRd6ldmFhngLfAFl0b4"
-                    alt=""
-                  />
-                  Secured by Buy Me A Coffee
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWcctLwxW_b2Y4LJUlAqxXs4YpGeb8djRd6ldmFhngLfAFl0b4"
+                      alt=""
+                    />
+                    Secured by Buy Me A Coffee
+                  </div>
                 </div>
-                </div>
-                
               </div>
             </div>
           </Modal.Body>

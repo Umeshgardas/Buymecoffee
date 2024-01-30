@@ -2,21 +2,22 @@
 header {
   @include flexRowBetweenCenter();
   padding: $space * 2 $space * 5;
-  background-color: $secondary-light; /* Orange background color */
+  background-color: $secondary-light; 
   .logo {
     padding: calc($space/3);
     color: #FBDF00;
-    // border: 1px solid red;
+    border: 1px solid $primary-orange;
+    border-radius: $space;
     img {
-      width: 30px; /* Adjust the logo width */
-      height: 30px; /* Adjust the logo height */
+      width: 30px; 
+      height: 30px; 
     }
   }
 }
 
 .myPageButton {
-  background-color: #fff; /* White background */
-  color: #ff8c00; /* Orange text color */
+  background-color: #fff;
+  color: #ff8c00;
   border: none;
   padding: 10px;
   cursor: pointer;

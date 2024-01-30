@@ -71,6 +71,7 @@ const InputSet = ({
           ) : (
             <SelectPicker
               data={data}
+              appearance="subtle"
               value={value}
               searchable={false}
               classPrefix="settings"
@@ -112,7 +113,7 @@ const InputSet = ({
             />
           </InputGroup>
         )} 
-        &nbsp;&nbsp;{postAddon &&  <span>{postAddon}</span> }
+        {postAddon &&  <span>{postAddon}</span> }
         {removable && <AiOutlineMinusCircle className="remove-icon" />}
       </div>
       {error && <p className="error">{error}</p>}

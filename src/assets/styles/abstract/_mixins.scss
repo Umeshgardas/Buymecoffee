@@ -330,7 +330,7 @@
 
 @mixin WebkitScrollbarY() {
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
 
   &:hover {
     overflow-y: auto;

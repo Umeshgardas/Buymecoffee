@@ -8,15 +8,18 @@ import Dashboard from "../../pages/dashboard";
 import Extras from "../../pages/extras/extras";
 import Supporters from "../../pages/extras/supporters";
 import MyExtras from "../../pages/extras/myextras";
+import Posts from "../../pages/dashboard/posts";
+import DExtras from "../../pages/dashboard/extras";
+import Home from "../../pages/dashboard/home";
 
 const Layout = ({ children }) => {
   const parentRef = useRef();
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (value) => {
     setInputValue(value);
   };
-  
+
   return (
     <>
       <div id="navLength"></div>
@@ -35,11 +38,18 @@ const Layout = ({ children }) => {
             <div className="mainLayout-inner_body">
               {children}
               <Routes>
-                <Route path="/" element={<Dashboard />} />
+                <Route path="/" element={<Dashboard />}>
+                  <Route index  element={<Home />} />
+                  <Route path="/posts" element={<Posts />} />
+                  <Route path="/extras" element={<DExtras />} />
+                </Route>
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/extras" element={<Extras />}>
                   <Route path="/extras/myextras" element={<MyExtras />}></Route>
-                  <Route path="/extras/supporters" element={<Supporters />}></Route>
+                  <Route
+                    path="/extras/supporters"
+                    element={<Supporters />}
+                  ></Route>
                 </Route>
                 <Route path="/signup" element={<Signup />} />
               </Routes>

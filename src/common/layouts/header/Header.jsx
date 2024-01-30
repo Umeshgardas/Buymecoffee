@@ -2,7 +2,6 @@
 
 import React from "react";
 import { FaUser } from "react-icons/fa";
-import { SiBuymeacoffee } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
