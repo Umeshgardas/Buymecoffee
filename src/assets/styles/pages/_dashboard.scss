@@ -8,6 +8,9 @@
   &_inner {
     padding: 0 calc($space * 6);
     background-color: $secondary-light;
+    @include res(tab-lg) {
+      padding: 0 calc($space);
+    }
     &-top {
       @include flexRowBetweenCenter();
       .avatar_div {
@@ -336,11 +339,11 @@ a {
 //   }
 // }
 
-.feed {
-  padding-top: $space;
-  border: 1px solid black;
-  @include flexRowBetweenCenter();
-}
+// .feed {
+//   padding-top: $space;
+//   border: 1px solid black;
+//   @include flexRowBetweenCenter();
+// }
 
 // .third_feed {
 //   display: inline;
