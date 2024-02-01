@@ -176,6 +176,12 @@
                 .pinned {
                   width: auto;
                 }
+                .pinned_text {
+                  display: block;
+                  @include res(tab-lg) {
+                    display: none;
+                  }
+                }
                 gap: 1rem;
                 width: auto;
                 .dropdown-menu {

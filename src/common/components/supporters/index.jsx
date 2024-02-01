@@ -28,9 +28,12 @@ const Supporters = () => {
             </div>
             <div className="supporters_container_avatar-right">
               {pinned ? (
-                <span className="pinned">
-                  <BsFillPinAngleFill /> Pinned
-                </span>
+                <>
+                  <span className="pinned">
+                    <BsFillPinAngleFill />
+                  </span>
+                  <span className="pinned_text">Pinned</span>
+                </>
               ) : (
                 ""
               )}
