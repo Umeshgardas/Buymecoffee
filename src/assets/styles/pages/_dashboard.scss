@@ -113,7 +113,7 @@
           position: relative;
           display: inline-block;
           vertical-align: middle;
-          background-color: $secondary-light;
+          background-color: #ffffff;
           .icons {
             @include flexRowStart();
             gap: 1rem;
@@ -146,11 +146,11 @@
           width: 100%;
           @include flexColumnStart();
           gap: 1rem;
+
           &_container {
             width: 100%;
-            background-color: $secondary-light;
+            background-color: #ffffff;
             padding: calc($space);
-            background-color: $secondary-light;
             margin: 0px !important;
             .rs-col {
               display: flex;
@@ -173,22 +173,25 @@
               &-right {
                 display: flex;
                 align-items: start;
-                // border: 1px solid red;
+                .pinned {
+                  width: auto;
+                }
                 gap: 1rem;
+                width: auto;
                 .dropdown-menu {
                   position: relative;
                   display: inline-block;
-                  margin-right: 20px;
+                  margin-right: 25px;
 
                   .dropdown-toggle {
                     cursor: pointer;
                   }
 
                   .dots {
-                    font-size: 20px;
+                    font-size: 25px;
                     cursor: pointer;
                     position: relative;
-                    top: -10px;
+                    top: -15px;
                     margin: 0;
                     padding: 0;
                   }
@@ -200,7 +203,7 @@
                     min-width: 100px;
                     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                     z-index: 1;
-                    top: 100%; /* Adjust position as needed */
+                    top: 60%; /* Adjust position as needed */
                     left: 0; /* Adjust position as needed */
                     padding: 8px 0; /* Added padding */
 
@@ -261,6 +264,8 @@
           width: 100%;
         }
         &-top {
+          background-color: #ffffff;
+
           width: 300px;
           height: fit-content;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -404,6 +409,7 @@
           @include flexColumnStart();
           gap: 1rem;
           border-radius: $space/2;
+          background-color: #ffffff;
         }
       }
     }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Avatar, Col, Row } from "rsuite";
+import { BsFillPinAngleFill } from "react-icons/bs";
 
 const Supporters = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,13 @@ const Supporters = () => {
               </p>
             </div>
             <div className="supporters_container_avatar-right">
-              {pinned ? "Pinned" : ""}
+              {pinned ? (
+                <span className="pinned">
+                  <BsFillPinAngleFill /> Pinned
+                </span>
+              ) : (
+                ""
+              )}
               <div className="dropdown-menu">
                 <div
                   className="dropdown-toggle"
