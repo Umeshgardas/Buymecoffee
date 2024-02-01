@@ -11,7 +11,7 @@ function App() {
   const [isAuth, setIsAuth] = useState(true);
 
   return (
-    <div className="App">{isAuth ? <Layout></Layout> : <Signup />}</div>
+    <div className="App">{isAuth ? <Layout/> : <Signup />}</div>
   );
 }
 

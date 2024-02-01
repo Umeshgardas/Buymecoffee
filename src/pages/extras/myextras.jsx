@@ -4,19 +4,10 @@ import { isValidNumber } from "../../helpers/regex";
 
 function MyExtras() {
   const [isHovered, setIsHovered] = useState(false);
-  const [isFocused, setIsFocused] = useState(false);
 
-  const handleFocus = () => {
-    setIsFocused(true);
-  };
-
-  const handleBlur = () => {
-    setIsFocused(false);
-  };
-
-  const divStyle = {
-    backgroundColor: isFocused ? "#fff" : "#E0E5E9",
-  };
+  // const divStyle = {
+  //   backgroundColor: isFocused ? "#fff" : "#E0E5E9",
+  // };
   return (
     <>
       <form action="" className="extras_form_container">

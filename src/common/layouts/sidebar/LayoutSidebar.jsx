@@ -14,6 +14,11 @@ const sidebarLink = [
     path: "/",
   },
   {
+    icon: <MdOutlineInsertChart />,
+    name: "Overview",
+    path: "/overview",
+  },
+  {
     icon: <IoMdHeartEmpty />,
     name: "Supporters",
     path: "/profile",

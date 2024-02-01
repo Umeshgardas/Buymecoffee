@@ -4,27 +4,12 @@ import { Avatar, Button } from "rsuite";
 import "rsuite/dist/rsuite.min.css";
 
 const Dashboard = () => {
-  const dashboardlinks = [
-    {
-      name: "Home",
-      path: "/",
-    },
-    {
-      name: "Extras",
-      path: "/extras",
-    },
-    {
-      name: "Posts",
-      path: "/posts",
-    },
-  ];
-
   return (
     <>
       <div className="dashboard">
-        <div className="dashboard_inner">
-          <div className="dashboard_inner-top">
-            <div className="dashboard_inner-top_avatar_icon">
+        <div className="dashboard_header">
+          <div className="dashboard_header-top">
+            <div className="dashboard_header-top_avatar_icon">
               <div className="avatar_div">
                 <Avatar
                   size="lg"
@@ -41,16 +26,25 @@ const Dashboard = () => {
                 <span>2.1k supporters</span>
               </div>
             </div>
-            <div className="dashboard_inner-top_followsupport">
+            <div className="dashboard_header-top_followsupport">
               <a>Follow</a>
               <a>Support</a>
             </div>
           </div>
-          <div className="dashboard_inner-bottom">
-            <div className="dashboard_inner-bottom_dashboard_routes">
-              <NavLink to="/"> Home </NavLink>
-              <NavLink to="/posts"> Posts <span>10</span> </NavLink>
-              <NavLink to="/extras"> Extras <span>20</span></NavLink>
+          <div className="dashboard_header-bottom">
+            <div className="dashboard_header-bottom_dashboard_routes">
+              <NavLink to="/" activeClassName="active">
+                Home
+              </NavLink>
+
+              <NavLink to="/posts">
+                {" "}
+                Posts <span>10</span>{" "}
+              </NavLink>
+              <NavLink to="/extras">
+                {" "}
+                Extras <span>20</span>
+              </NavLink>
             </div>
           </div>
         </div>

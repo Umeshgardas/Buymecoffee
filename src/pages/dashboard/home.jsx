@@ -39,8 +39,8 @@ const Home = () => {
               <FaYoutube />
             </span>
           </div>
-          <div className="third_feed">
-            <div className="third_feed_header">
+          <div className="supporters">
+            <div className="supporters_header">
               <h5>RECENT SUPPORTERS</h5>
             </div>
             <Supporters />
